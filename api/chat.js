@@ -26,7 +26,7 @@ export default async function handler(req, res) {
         'X-Title': 'Hardik Goel Portfolio',
       },
       body: JSON.stringify({
-        model: 'meta-llama/llama-3.1-8b-instruct:free',
+        model: 'inclusionai/ring-2.6-1t:free',
         max_tokens: 800,
         messages: [
           { role: 'system', content: system || '' },
