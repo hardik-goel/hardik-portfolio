@@ -1,15 +1,14 @@
 export default async function handler(req, res) {
-  // Allow only POST
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-
-  // CORS headers — allow your deployed frontend origin
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
+  // Handle preflight FIRST, before anything else
   if (req.method === 'OPTIONS') return res.status(200).end();
+
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
 
   const { messages, system } = req.body;
 
@@ -23,15 +22,13 @@ export default async function handler(req, res) {
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${process.env.OPENROUTER_API_KEY}`,
-        'HTTP-Referer': process.env.SITE_URL || 'https://hardik-goel.vercel.app',
+        'HTTP-Referer': process.env.SITE_URL || 'https://hardik-portfolio-rho.vercel.app',
         'X-Title': 'Hardik Goel Portfolio',
       },
       body: JSON.stringify({
-        // Free model — no billing needed on OpenRouter
         model: 'meta-llama/llama-3.1-8b-instruct:free',
         max_tokens: 800,
         messages: [
-          // Inject system prompt as first user+assistant turn (OpenRouter compatible)
           { role: 'system', content: system || '' },
           ...messages,
         ],
@@ -45,8 +42,6 @@ export default async function handler(req, res) {
     }
 
     const data = await response.json();
-
-    // Normalize to the shape the frontend expects: { content: [{ text }] }
     const text = data.choices?.[0]?.message?.content || 'No response received.';
     return res.status(200).json({ content: [{ text }] });
 
