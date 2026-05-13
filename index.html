@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="Hardik Goel — Senior AI & Data Architect | GenAI Systems Builder | MLOps Platform Owner | Bangalore, India">
-<title>Hardik Goel — Senior AI & Data Architect</title>
+<meta name="description" content="Hardik Goel — AI & Data Architect | GenAI Systems Builder | MLOps Platform Owner | Bangalore, India">
+<title>Hardik Goel — AI & Data Architect</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/tabler-icons.min.css">
@@ -197,10 +197,11 @@ section{padding:5rem clamp(1.5rem,6vw,4rem)}
 .tl-details.open{display:block}
 .tl-bullets{list-style:none;display:flex;flex-direction:column;gap:6px}
 .tl-bullets li{
-  display:flex;gap:8px;font-size:13px;color:var(--text2);line-height:1.6;
+  display:block;padding-left:1.25rem;position:relative;
+  font-size:13px;color:var(--text2);line-height:1.6;
 }
-.tl-bullets li::before{content:"→";color:var(--blue);flex-shrink:0;margin-top:1px}
-.tl-bullets li strong{color:var(--text);font-weight:500}
+.tl-bullets li::before{content:"→";color:var(--blue);position:absolute;left:0;top:0}
+.tl-bullets li strong{display:inline;color:var(--text);font-weight:500}
 
 /* ── PROJECTS ────────────────────────────────── */
 #projects{background:var(--bg2)}
@@ -390,6 +391,18 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
   .nav-links{display:none}
   .hero-stats{gap:1.25rem}
 }
+  /* ── PHOTO WIDGET ─────────────────────────────── */
+.photo-widget{
+  position:fixed;bottom:86px;right:24px;z-index:290;
+  width:64px;height:64px;border-radius:50%;
+  border:2px solid var(--blue);
+  box-shadow:0 4px 20px rgba(74,140,247,.35);
+  overflow:hidden;cursor:pointer;
+  transition:.2s;
+  background:var(--bg3);
+}
+.photo-widget img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-widget:hover{transform:scale(1.07);box-shadow:0 6px 28px rgba(74,140,247,.5)}
 </style>
 </head>
 <body>
@@ -417,7 +430,7 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
   <div class="hero-inner">
     <div class="hero-badge">
       <span class="badge-dot"></span>
-      Available for senior AI/Data architecture roles · Bangalore, India
+      Available for AI/Data architecture/Leadership roles · Bangalore, India
     </div>
     <h1 class="hero-name"><span class="grad">Hardik Goel</span></h1>
     <div class="hero-typing">
@@ -426,19 +439,19 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
     <p class="hero-sub">
       Bridging <strong>enterprise-scale data platforms</strong> and <strong>production-grade GenAI systems</strong> — 
       from MLOps governance to agentic AI orchestration. 
-      Open-source contributor, published author, and AI educator with 8+ years of community work alongside corporate career.
+      Open-source contributor, published author, and AI educator with a decade plus of community work alongside corporate career.
     </p>
     <div class="hero-stats">
       <div class="h-stat"><span class="h-stat-val">13+</span><span class="h-stat-lbl">Years experience</span></div>
       <div class="h-stat"><span class="h-stat-val">£3.5B</span><span class="h-stat-lbl">Platform ownership</span></div>
-      <div class="h-stat"><span class="h-stat-val">8+</span><span class="h-stat-lbl">Years as AI educator</span></div>
+      <div class="h-stat"><span class="h-stat-val">Decade+</span><span class="h-stat-lbl">Years as AI educator</span></div>
       <div class="h-stat"><span class="h-stat-val">2</span><span class="h-stat-lbl">OSS AI tools shipped</span></div>
     </div>
     <div class="hero-btns">
       <a class="btn-pri" href="#projects"><i class="ti ti-bolt"></i> View Projects</a>
       <a class="btn-sec" href="https://github.com/hardik-goel" target="_blank"><i class="ti ti-brand-github"></i> GitHub</a>
       <a class="btn-sec" href="https://www.linkedin.com/in/hardik-goel-a6334936/" target="_blank"><i class="ti ti-brand-linkedin"></i> LinkedIn</a>
-      <a class="btn-sec" href="Hardik_Goel_Resume.docx" download><i class="ti ti-download"></i> Resume</a>
+      <a class="btn-sec" href="https://drive.google.com/file/d/1p1Swux8VCrionS6kZGuUEBjGcqBcSS-U/view?usp=sharing" download><i class="ti ti-download"></i> Resume</a>
     </div>
   </div>
 </section>
@@ -452,7 +465,7 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
       <div class="about-text">
         <p>Most engineers are either <strong>enterprise-only</strong> or <strong>GenAI-only</strong>. I sit at the intersection — 13+ years owning scalable data platforms, MLOps governance frameworks, and production pipelines, while simultaneously building agentic AI systems, intelligent orchestration frameworks, and LLM-powered engineering workflows.</p>
         <p>At Tesco, I architect a £3.5B commodity AI platform and pioneered a persona-based agentic engineering framework — one of the earliest enterprise implementations of role-based AI agents in production data engineering. At Paytm, I led a 14-member team and drove transformative metrics: payment SLA from 15 days → 3 days, attrition cut by 40%.</p>
-        <p>Parallel to my corporate career, I've been an <strong>AI educator for 8+ years</strong>, a published author, open-source contributor, and content creator — building community while building systems.</p>
+        <p>Parallel to my corporate career, I've been an <strong>AI educator for 10+ years</strong>, a published author, open-source contributor, and content creator — building community while building systems.</p>
       </div>
       <div class="focus-pills" style="margin-top:1.5rem">
         <span class="pill pill-blue"><i class="ti ti-brain"></i> Agentic AI Systems</span>
@@ -475,12 +488,12 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
       </div>
       <div class="a-card">
         <div class="a-card-icon">🎓</div>
-        <div class="a-card-val">8+</div>
+        <div class="a-card-val">10 +</div>
         <div class="a-card-lbl">Years as AI educator across 8 platforms</div>
       </div>
       <div class="a-card">
         <div class="a-card-icon">📦</div>
-        <div class="a-card-val">PyPI</div>
+        <div class="a-card-val">PyPI </div>
         <div class="a-card-lbl">Published open-source AI library</div>
       </div>
       <div class="a-card">
@@ -526,13 +539,37 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
         </button>
         <div class="tl-details">
           <ul class="tl-bullets">
-            <li>Architected AI-driven commodity forecasting platform for <strong>£3.5B procurement domain</strong> spanning multiple commodities and prediction horizons — Azure ML, MLflow, SHAP, PSI drift monitoring.</li>
-            <li>Established end-to-end <strong>MLOps governance standards</strong>: DQ gates, model metadata registry, security scanning, audit logs, Microsoft Purview lineage, and Maker-Checker controls.</li>
-            <li>Designed <strong>persona-based agentic framework</strong> with specialised AI roles for Data Engineering, ML Review, Security, and MLOps Governance — one of the earliest enterprise implementations.</li>
-            <li>Built reusable metadata-driven pipelines integrating LSEG and enterprise RDBMS sources, reducing commodity onboarding effort at scale.</li>
-            <li>Pioneered AI-augmented engineering workflows using Claude/GPT agents for automated code review, test generation, documentation, and pipeline scaffolding.</li>
-            <li>Authored AI-enforceable markdown standards enabling automated enforcement of coding practices, security guardrails, and quality gates via RAG workflows.</li>
-            <li>Delivered stakeholder analytics dashboards and data enrichment solutions improving commercial visibility into commodity trends and model outputs.</li>
+            <p><strong>End-to-end architecture ownership</strong> of an AI-driven commodity forecasting platform supporting a <strong>£3.5B procurement domain</strong>, spanning MLOps governance, platform engineering, and AI-augmented engineering enablement.</p>
+
+<h4>Platform Architecture &amp; MLOps Governance</h4>
+
+
+<ul>
+  <li>Architected and delivered a production-grade AI commodity forecasting platform supporting <strong>£3.5B in annual procurement</strong> across multiple commodities and prediction horizons.</li>
+
+  <li>Designed scalable MLOps workflows on Azure ML using <strong>MLflow, SHAP, and PSI drift monitoring</strong>; established end-to-end governed deployment pipelines with DQ gates, model metadata registries, security scanning, audit logs, Microsoft Purview lineage, and Maker-Checker controls.</li>
+
+  <li>Defined and enforced engineering governance standards across Data Engineering and ML — modular architecture, typed interfaces, reusable pipeline templates, and automated pytest coverage gates — improving deployment consistency and platform reliability.</li>
+
+  <li>Built reusable metadata-driven data and ML pipelines integrating <strong>LSEG and enterprise RDBMS sources</strong>, reducing commodity onboarding effort and improving scalability across new forecasting use cases.</li>
+
+  <li>Revamped fragmented forecasting workflows into a scalable, production-ready architecture optimised for reliability, maintainability, auditability, and developer velocity.</li>
+
+  <li>Delivered stakeholder analytics dashboards and data enrichment solutions, improving commercial visibility into commodity trends and model outputs.</li>
+</ul>
+
+<h4>AI-Augmented Engineering &amp; Agentic Framework Design</h4>
+
+<ul>
+  <li>Pioneered AI-augmented engineering workflows using <strong>Claude and GPT agents</strong> for automated code review, test generation, documentation, and pipeline scaffolding — significantly accelerating delivery velocity.</li>
+
+  <li>Designed a <strong>persona-based agentic framework</strong> with specialised AI roles for Data Engineering, ML Review, Security, and MLOps Governance — one of the earliest enterprise implementations of role-based AI agents in a production data platform.</li>
+
+  <li>Authored AI-enforceable markdown standards enabling automated enforcement of coding practices, security guardrails, and quality gates through structured context orchestration and RAG workflows.</li>
+
+  <li>Contributed architecture consulting and platform engineering across enterprise PoCs and production adoption initiatives, accelerating AI adoption across cross-functional teams.</li>
+</ul>
+</ul>
           </ul>
         </div>
       </div>
@@ -677,7 +714,7 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
       <div class="proj-desc">Provider-agnostic AI model routing and orchestration framework. Dynamic fallback chains, cost-optimised routing, latency-aware model selection across OpenAI, Anthropic, and Google — designed for enterprise AI platform integration.</div>
       <div class="proj-tags"><span class="tag">Python</span><span class="tag">LLM Routing</span><span class="tag">Orchestration</span><span class="tag">OpenAI</span><span class="tag">Anthropic</span></div>
       <div class="proj-links">
-        <a href="https://github.com/hardik-goel" class="plink" target="_blank"><i class="ti ti-brand-github"></i> GitHub</a>
+        <a href="https://github.com/hardik-goel/Switchboard" class="plink" target="_blank"><i class="ti ti-brand-github"></i> GitHub</a>
       </div>
     </div>
 
@@ -726,19 +763,6 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
       <div class="proj-desc">Autonomous compliance monitoring, alerting, and remediation for enterprise AI adoption in regulated industries. Agentic governance frameworks for finance, retail, and healthcare — built with RAG, Vector DBs, and LLMs.</div>
       <div class="proj-tags"><span class="tag">Governance</span><span class="tag">Compliance</span><span class="tag">Agentic</span><span class="tag">RAG</span></div>
       <div class="proj-links"></div>
-    </div>
-
-    <div class="proj-card blue">
-      <div class="proj-top">
-        <div class="proj-icon">🖥️</div>
-        <span class="status-badge status-build">MCP Server</span>
-      </div>
-      <div class="proj-name">MCP Server — GenAI Tooling</div>
-      <div class="proj-desc">Built MCP (Model Context Protocol) server from scratch for GenAI product integration. Demonstrates hands-on fluency with the emerging agentic infrastructure layer — autonomous tool invocation and context orchestration.</div>
-      <div class="proj-tags"><span class="tag">MCP</span><span class="tag">GenAI</span><span class="tag">Tool Calling</span><span class="tag">LLM</span></div>
-      <div class="proj-links">
-        <a href="https://github.com/hardik-goel" class="plink" target="_blank"><i class="ti ti-brand-github"></i> GitHub</a>
-      </div>
     </div>
 
   </div>
@@ -825,7 +849,7 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
 
     <div class="beyond-card">
       <div class="beyond-icon" style="background:var(--blue-d);border-color:rgba(74,140,247,.2)">🎓</div>
-      <div class="beyond-title">AI / Data Educator — 8+ Years</div>
+      <div class="beyond-title">AI / Data Educator — 10+ Years</div>
       <div class="beyond-desc">Designed and delivered full-stack curricula in Data Engineering, Data Science, and Generative AI. Mentored professionals, built end-to-end courses, and conducted PAN-India workshops for enterprises transitioning into AI-driven organisations.</div>
       <div class="platform-badges">
         <span class="pbadge">UpGrad</span><span class="pbadge">Analytics Vidhya</span><span class="pbadge">Ducat</span><span class="pbadge">GUVI</span><span class="pbadge">DataCouch</span><span class="pbadge">IK</span><span class="pbadge">ToolsQA</span>
@@ -838,7 +862,6 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
       <div class="beyond-desc">Keynote panelist at <strong>ElasticSearch CXO Fusion</strong> on Generative AI adoption. Guest lecturer at graduate universities. Regular podcast guest. Representing practical AI leadership in enterprise contexts.</div>
       <div class="beyond-links">
         <a href="https://drive.google.com/file/d/1DPyR_Edswyl2mnzIPM_BybiSBBbSxaAs/view" class="blink" target="_blank"><i class="ti ti-presentation"></i> Workshop snippet</a>
-        <a href="https://www.youtube.com/watch?v=WrJCkLoZutk&list=PLrzM5rgawSqTW_treNz0KhXbsJPlzxD78" class="blink" target="_blank"><i class="ti ti-brand-youtube"></i> Session recording</a>
       </div>
     </div>
 
@@ -847,7 +870,6 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
       <div class="beyond-title">Content Creator</div>
       <div class="beyond-desc">YouTube and Instagram creator simplifying Data Engineering and Generative AI for global audiences. Currently producing a video tutorial series on Data & AI. Focus: practical, applied content for practitioners and learners.</div>
       <div class="beyond-links">
-        <a href="https://www.youtube.com/watch?v=WrJCkLoZutk&list=PLrzM5rgawSqTW_treNz0KhXbsJPlzxD78" class="blink" target="_blank"><i class="ti ti-brand-youtube"></i> YouTube</a>
       </div>
     </div>
 
@@ -899,21 +921,19 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
     <a class="contact-link" href="mailto:hardik.goel214@gmail.com"><i class="ti ti-mail"></i> hardik.goel214@gmail.com</a>
     <a class="contact-link" href="https://www.linkedin.com/in/hardik-goel-a6334936/" target="_blank"><i class="ti ti-brand-linkedin"></i> LinkedIn</a>
     <a class="contact-link" href="https://github.com/hardik-goel" target="_blank"><i class="ti ti-brand-github"></i> GitHub</a>
-    <a class="contact-link" href="https://www.youtube.com/watch?v=WrJCkLoZutk&list=PLrzM5rgawSqTW_treNz0KhXbsJPlzxD78" target="_blank"><i class="ti ti-brand-youtube"></i> YouTube</a>
     <a class="contact-link" href="tel:+919650129605"><i class="ti ti-phone"></i> +91-9650129605</a>
   </div>
 </section>
 
 <footer>
-  <span style="color:var(--text3)">Hardik Goel · Senior AI & Data Architect · Bangalore, India</span>
+  <span style="color:var(--text3)">Hardik Goel ·  AI & Data Architect · Bangalore, India</span>
   &nbsp;·&nbsp;
-  <a href="https://github.com/hardik-goel" style="color:var(--text3)">hardik-goel.github.io</a>
 </footer>
 
 <!-- ── CHAT WIDGET ─────────────────────────── -->
-<button class="chat-btn" onclick="toggleChat()" aria-label="Chat with Hardik">
-  <i class="ti ti-message-circle-2"></i>
-</button>
+<!--<button class="chat-btn" onclick="toggleChat()" aria-label="Chat with Hardik">-->
+<!--  <i class="ti ti-message-circle-2"></i>-->
+<!--</button>-->
 
 <div class="chat-panel" id="chat-panel">
   <div class="chat-ph">
