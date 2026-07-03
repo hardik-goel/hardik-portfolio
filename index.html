@@ -571,8 +571,9 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
     </div>
 </div>
   <img class="hero-photo"
-       src="https://raw.githubusercontent.com/hardik-goel/hardik-portfolio/master/resources/hardik.jpg"
-       alt="Hardik Goel"
+       src="/resources/hardik.jpg"
+       width="400" height="400" loading="eager"
+       alt="Hardik Goel — AI & Data Architect, GenAI systems builder, Bangalore"
        onerror="this.style.display='none'">
   </div>
 </section>
@@ -1106,7 +1107,8 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
 
 <!-- ── PHOTO WIDGET ─────────────────────────── -->
 <div class="photo-widget" onclick="toggleChat()" title="Chat with Hardik">
-  <img src="https://raw.githubusercontent.com/hardik-goel/hardik-portfolio/master/resources/hardik.jpg"
+  <img src="/resources/hardik.jpg"
+       width="400" height="400" loading="lazy"
        alt="Hardik Goel"
        onerror="this.parentElement.style.background='linear-gradient(135deg,var(--blue),var(--teal))';this.style.display='none'">
 </div>
@@ -1176,41 +1178,25 @@ function toggleDetails(btn){
     :'<i class="ti ti-chevron-down"></i> See full details';
 }
 
-/* ── BLOG FEEDS ─────────────────────────── */
+/* ── BLOG FEEDS (static, from /blog/posts.json — own domain, no external proxy) ── */
 const BLOG_FEEDS={
-  substack:{
-    listId:'substack-posts',
-    sourceKey:'substack',
-    fallbackUrl:'https://goelh.substack.com/',
-    rssUrl:'https://goelh.substack.com/feed'
-  },
-  medium:{
-    listId:'medium-posts',
-    sourceKey:'medium',
-    fallbackUrl:'https://medium.com/@hardik.goel214',
-    rssUrl:'https://medium.com/feed/@hardik.goel214'
-  }
+  substack:{listId:'substack-posts',sourceKey:'substack',platform:'Substack',fallbackUrl:'https://goelh.substack.com/'},
+  medium:{listId:'medium-posts',sourceKey:'medium',platform:'Medium',fallbackUrl:'https://medium.com/@hardik.goel214'}
 };
 const BLOG_STATE={};
 const BLOG_VISIBLE_COUNT=2;
 
 function escapeHtml(str){
-  return str.replace(/[&<>"']/g,(ch)=>({
+  return String(str).replace(/[&<>"']/g,(ch)=>({
     '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
   })[ch]);
-}
-
-function fmtDate(dateStr){
-  const d=new Date(dateStr);
-  if(Number.isNaN(d.getTime()))return '';
-  return d.toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'});
 }
 
 function renderPosts(listId,items,fallbackUrl){
   const list=document.getElementById(listId);
   if(!list)return;
   if(!items.length){
-    list.innerHTML=`<li class="blog-empty">No posts found right now. <a href="${fallbackUrl}" target="_blank" rel="noopener noreferrer">Open source page</a>.</li>`;
+    list.innerHTML=`<li class="blog-empty">No posts yet. <a href="${fallbackUrl}" target="_blank" rel="noopener noreferrer">Open source page</a>.</li>`;
     return;
   }
   const sourceKey=Object.keys(BLOG_FEEDS).find(k=>BLOG_FEEDS[k].listId===listId);
@@ -1221,14 +1207,14 @@ function renderPosts(listId,items,fallbackUrl){
   const visibleItems=state.expanded?state.items:state.items.slice(0,BLOG_VISIBLE_COUNT);
   list.innerHTML=visibleItems.map(item=>{
     const title=escapeHtml(item.title||'Untitled post');
-    const link=item.link||fallbackUrl;
-    const date=fmtDate(item.pubDate||item.isoDate||'');
-    return `<li class="blog-item"><a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a><div class="blog-meta">${date}</div></li>`;
+    const link=item.url||fallbackUrl;
+    const date=escapeHtml(item.date||'');
+    return `<li class="blog-item"><a href="${link}">${title}</a><div class="blog-meta">${date}</div></li>`;
   }).join('');
   const remaining=Math.max(state.items.length-BLOG_VISIBLE_COUNT,0);
   const overflow=document.getElementById(`${sourceKey}-overflow`);
   if(overflow){
-    overflow.textContent=!state.expanded&&remaining>0?`... +${remaining} more on the blog`:state.items.length>0?'':'';
+    overflow.textContent=!state.expanded&&remaining>0?`... +${remaining} more on the blog`:'';
   }
   const toggleBtn=document.querySelector(`[data-blog-toggle="${sourceKey}"]`);
   if(toggleBtn){
@@ -1245,7 +1231,7 @@ function renderPosts(listId,items,fallbackUrl){
 function renderFeedError(listId,fallbackUrl){
   const list=document.getElementById(listId);
   if(!list)return;
-  list.innerHTML=`<li class="blog-empty">Could not load posts live. <a href="${fallbackUrl}" target="_blank" rel="noopener noreferrer">Read on platform</a>.</li>`;
+  list.innerHTML=`<li class="blog-empty">Posts unavailable. <a href="${fallbackUrl}" target="_blank" rel="noopener noreferrer">Read on platform</a>.</li>`;
 }
 
 function toggleBlogPosts(sourceKey){
@@ -1260,21 +1246,21 @@ document.querySelectorAll('[data-blog-toggle]').forEach(btn=>{
   btn.addEventListener('click',()=>toggleBlogPosts(btn.dataset.blogToggle));
 });
 
-async function loadFeed({listId,fallbackUrl,rssUrl}){
+/* Load once from the static manifest built by build_blog.py; link to canonical
+   on-site pages. Falls back to the platform page if the manifest is missing. */
+(async function loadStaticFeed(){
   try{
-    const endpoint=`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
-    const res=await fetch(endpoint);
-    if(!res.ok)throw new Error('feed unavailable');
-    const data=await res.json();
-    const items=Array.isArray(data.items)?data.items:[];
-    renderPosts(listId,items,fallbackUrl);
+    const res=await fetch('/blog/posts.json',{cache:'no-cache'});
+    if(!res.ok)throw new Error('manifest unavailable');
+    const posts=await res.json();
+    Object.values(BLOG_FEEDS).forEach(cfg=>{
+      const items=posts.filter(p=>Array.isArray(p.platforms)&&p.platforms.includes(cfg.platform));
+      renderPosts(cfg.listId,items,cfg.fallbackUrl);
+    });
   }catch(e){
-    renderFeedError(listId,fallbackUrl);
+    Object.values(BLOG_FEEDS).forEach(cfg=>renderFeedError(cfg.listId,cfg.fallbackUrl));
   }
-}
-
-loadFeed(BLOG_FEEDS.substack);
-loadFeed(BLOG_FEEDS.medium);
+})();
 
 /* ── CHAT WIDGET ────────────────────────── */
 const HARDIK_CTX=`You are Hardik Goel, a Senior AI & Data Architect with 13+ years experience based in Bangalore, India. Answer in first person, be confident and specific. Keep responses to 3-5 sentences unless detail is genuinely needed.
