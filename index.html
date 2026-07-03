@@ -5,6 +5,71 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="description" content="Hardik Goel — AI & Data Architect | GenAI Systems Builder | MLOps Platform Owner | Bangalore, India">
 <title>Hardik Goel — AI & Data Architect</title>
+
+<!-- Canonical -->
+<link rel="canonical" href="https://hardik-portfolio-rho.vercel.app/">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Hardik Goel">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hardik-portfolio-rho.vercel.app/">
+<meta property="og:title" content="Hardik Goel — AI & Data Architect">
+<meta property="og:description" content="AI & Data Architect | GenAI Systems Builder | MLOps Platform Owner | Bangalore, India">
+<meta property="og:image" content="https://hardik-portfolio-rho.vercel.app/resources/hardik.jpg">
+<meta property="og:image:alt" content="Hardik Goel">
+<meta property="og:site_name" content="Hardik Goel">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hardik Goel — AI & Data Architect">
+<meta name="twitter:description" content="AI & Data Architect | GenAI Systems Builder | MLOps Platform Owner | Bangalore, India">
+<meta name="twitter:image" content="https://hardik-portfolio-rho.vercel.app/resources/hardik.jpg">
+
+<!-- JSON-LD: Person + Book -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://hardik-portfolio-rho.vercel.app/#person",
+      "name": "Hardik Goel",
+      "url": "https://hardik-portfolio-rho.vercel.app/",
+      "image": "https://hardik-portfolio-rho.vercel.app/resources/hardik.jpg",
+      "jobTitle": "AI & Data Architect",
+      "description": "GenAI Systems Builder | MLOps Platform Owner",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bangalore",
+        "addressCountry": "India"
+      },
+      "email": "mailto:hardik.goel214@gmail.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/hardik-goel-a6334936/",
+        "https://github.com/hardik-goel",
+        "https://goelh.substack.com/",
+        "https://medium.com/@hardik.goel214",
+        "https://topmate.io/hardik_goel11/268148"
+      ]
+    },
+    {
+      "@type": "Book",
+      "@id": "https://hardik-portfolio-rho.vercel.app/#book",
+      "name": "Forgotten By Design — The Silent Epidemic of Digital Dementia",
+      "author": { "@id": "https://hardik-portfolio-rho.vercel.app/#person" },
+      "url": "https://www.amazon.in/Forgotten-Design-Epidemic-Digital-Dementia/dp/9367078056",
+      "isbn": "9367078056",
+      "publisher": "CleverFox Publishing",
+      "datePublished": "2025",
+      "bookFormat": "https://schema.org/Paperback",
+      "inLanguage": "en",
+      "about": "How digital dependency and system design erode human cognition."
+    }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.34.0/tabler-icons.min.css">
@@ -110,6 +175,7 @@ nav{
 .h-stat-val{font-size:1.6rem;font-weight:700;color:#fff;letter-spacing:-.03em;line-height:1}
 .h-stat-lbl{font-size:12px;color:var(--text2);margin-top:3px}
 .hero-btns{display:flex;gap:10px;flex-wrap:wrap}
+.hero-btns .btn-break{flex-basis:100%;height:0}
 .btn-pri{
   display:inline-flex;align-items:center;gap:7px;
   padding:10px 20px;border-radius:var(--r);font-size:14px;font-weight:500;
@@ -250,6 +316,45 @@ section{padding:5rem clamp(1.5rem,6vw,4rem)}
   font-size:12px;color:var(--text2);transition:.15s;
 }
 .plink:hover{color:var(--blue)}
+
+/* ── BLOG ───────────────────────────────────── */
+#blog{background:var(--bg2)}
+.blog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:16px}
+.blog-source{
+  background:
+    radial-gradient(circle at top right,rgba(74,140,247,.14),transparent 55%),
+    radial-gradient(circle at bottom left,rgba(45,212,191,.12),transparent 55%),
+    var(--bg3);
+  border:1px solid var(--bdr);border-radius:var(--r2);
+  padding:1.25rem;display:flex;flex-direction:column;gap:.875rem;
+  box-shadow:0 12px 40px rgba(0,0,0,.25);
+}
+.blog-head{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.blog-name{font-size:15px;font-weight:600;color:#fff;display:flex;align-items:center;gap:8px}
+.blog-open{
+  font-size:12px;color:var(--text2);display:inline-flex;align-items:center;gap:4px;
+  padding:4px 9px;border-radius:6px;background:var(--bg4);border:1px solid var(--bdr);transition:.15s;
+}
+.blog-open:hover{color:var(--blue);border-color:var(--bdr2)}
+.blog-list{list-style:none;display:flex;flex-direction:column;gap:10px}
+.blog-item{
+  border:1px solid var(--bdr);background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.01)),var(--bg4);
+  border-radius:12px;padding:.75rem .875rem;transition:.2s;
+}
+.blog-item:hover{border-color:var(--bdr2);transform:translateY(-1px)}
+.blog-item a{font-size:13px;font-weight:600;color:#fff;line-height:1.45}
+.blog-item a:hover{color:var(--blue)}
+.blog-meta{font-size:11px;color:var(--text3);margin-top:4px}
+.blog-empty{font-size:13px;color:var(--text2)}
+.blog-controls{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:2px}
+.blog-more{
+  display:inline-flex;align-items:center;gap:5px;
+  font-size:12px;font-weight:500;padding:5px 10px;border-radius:8px;
+  border:1px solid var(--bdr);background:var(--bg4);color:var(--text2);transition:.15s;
+}
+.blog-more:hover{border-color:var(--bdr2);color:#fff}
+.blog-more[hidden]{display:none}
+.blog-overflow{font-size:12px;color:var(--text3)}
 
 /* ── SKILLS ──────────────────────────────────── */
 .skills-grid{display:flex;flex-direction:column;gap:1.25rem}
@@ -419,6 +524,7 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
     <a href="#projects">Projects</a>
+    <a href="#blog">Blog</a>
     <a href="#skills">Skills</a>
     <a href="#beyond">Beyond</a>
     <a href="#contact">Contact</a>
@@ -457,7 +563,11 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
       <a class="btn-pri" href="#projects"><i class="ti ti-bolt"></i> View Projects</a>
       <a class="btn-sec" href="https://github.com/hardik-goel" target="_blank"><i class="ti ti-brand-github"></i> GitHub</a>
       <a class="btn-sec" href="https://www.linkedin.com/in/hardik-goel-a6334936/" target="_blank"><i class="ti ti-brand-linkedin"></i> LinkedIn</a>
-      <a class="btn-sec" href="https://drive.google.com/file/d/1p1Swux8VCrionS6kZGuUEBjGcqBcSS-U/view?usp=sharing" download><i class="ti ti-download"></i> Resume</a>
+      <a class="btn-sec" href="https://drive.google.com/file/d/1tqsDCa-PQwYbICBiGp-9mY5zdpIj2yFs/view?usp=sharing" target="_blank"><i class="ti ti-download"></i> Resume</a>
+      <span class="btn-break" aria-hidden="true"></span>
+      <a class="btn-sec" href="https://goelh.substack.com/" target="_blank"><i class="ti ti-article"></i> Substack</a>
+      <a class="btn-sec" href="https://medium.com/@hardik.goel214" target="_blank"><i class="ti ti-brand-medium"></i> Medium</a>
+      <a class="btn-sec" href="https://topmate.io/hardik_goel11/268148" target="_blank"><i class="ti ti-user-star"></i> Topmate</a>
     </div>
 </div>
   <img class="hero-photo"
@@ -779,6 +889,54 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
   </div>
 </section>
 
+<!-- ── BLOG ─────────────────────────────── -->
+<section id="blog">
+  <div class="sec-label fade-up"><i class="ti ti-article"></i> Blog</div>
+  <h2 class="sec-title fade-up">Latest Writing, Right Here</h2>
+  <p class="sec-sub fade-up">Recent Substack and Medium posts rendered directly on this page for a smoother reading path. Front-page links to both platforms remain available.</p>
+  <div class="blog-grid fade-up">
+    <article class="blog-source" data-blog-source="substack">
+      <div class="blog-head">
+        <div class="blog-name"><i class="ti ti-article"></i> Substack</div>
+        <a class="blog-open" href="https://goelh.substack.com/" target="_blank" rel="noopener noreferrer">
+          Visit <i class="ti ti-external-link"></i>
+        </a>
+      </div>
+      <ul id="substack-posts" class="blog-list">
+        <li class="blog-empty">Loading latest posts...</li>
+      </ul>
+      <div class="blog-controls">
+        <button type="button" class="blog-more" data-blog-toggle="substack" hidden>
+          Show more <i class="ti ti-chevron-down"></i>
+        </button>
+        <span class="blog-overflow" id="substack-overflow"></span>
+      </div>
+    </article>
+
+    <article class="blog-source" data-blog-source="medium">
+      <div class="blog-head">
+        <div class="blog-name"><i class="ti ti-brand-medium"></i> Medium</div>
+        <a class="blog-open" href="https://medium.com/@hardik.goel214" target="_blank" rel="noopener noreferrer">
+          Visit <i class="ti ti-external-link"></i>
+        </a>
+      </div>
+      <ul id="medium-posts" class="blog-list">
+        <li class="blog-empty">Loading latest posts...</li>
+      </ul>
+      <div class="blog-controls">
+        <button type="button" class="blog-more" data-blog-toggle="medium" hidden>
+          Show more <i class="ti ti-chevron-down"></i>
+        </button>
+        <span class="blog-overflow" id="medium-overflow"></span>
+      </div>
+    </article>
+  </div>
+  <p class="sec-sub fade-up" style="margin-top:24px">
+    <a class="blog-open" href="/blog/">Read every post on the blog <i class="ti ti-arrow-right"></i></a>
+    — canonical home for all essays, also on Substack &amp; Medium.
+  </p>
+</section>
+
 <!-- ── SKILLS ─────────────────────────────── -->
 <section id="skills">
   <div class="sec-label fade-up"><i class="ti ti-stack"></i> Skills</div>
@@ -1017,6 +1175,106 @@ function toggleDetails(btn){
     ?'<i class="ti ti-chevron-down"></i> Hide details'
     :'<i class="ti ti-chevron-down"></i> See full details';
 }
+
+/* ── BLOG FEEDS ─────────────────────────── */
+const BLOG_FEEDS={
+  substack:{
+    listId:'substack-posts',
+    sourceKey:'substack',
+    fallbackUrl:'https://goelh.substack.com/',
+    rssUrl:'https://goelh.substack.com/feed'
+  },
+  medium:{
+    listId:'medium-posts',
+    sourceKey:'medium',
+    fallbackUrl:'https://medium.com/@hardik.goel214',
+    rssUrl:'https://medium.com/feed/@hardik.goel214'
+  }
+};
+const BLOG_STATE={};
+const BLOG_VISIBLE_COUNT=2;
+
+function escapeHtml(str){
+  return str.replace(/[&<>"']/g,(ch)=>({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  })[ch]);
+}
+
+function fmtDate(dateStr){
+  const d=new Date(dateStr);
+  if(Number.isNaN(d.getTime()))return '';
+  return d.toLocaleDateString('en-US',{year:'numeric',month:'short',day:'numeric'});
+}
+
+function renderPosts(listId,items,fallbackUrl){
+  const list=document.getElementById(listId);
+  if(!list)return;
+  if(!items.length){
+    list.innerHTML=`<li class="blog-empty">No posts found right now. <a href="${fallbackUrl}" target="_blank" rel="noopener noreferrer">Open source page</a>.</li>`;
+    return;
+  }
+  const sourceKey=Object.keys(BLOG_FEEDS).find(k=>BLOG_FEEDS[k].listId===listId);
+  if(!sourceKey)return;
+  const state=BLOG_STATE[sourceKey]||{expanded:false,items:[]};
+  state.items=items.slice(0,8);
+  BLOG_STATE[sourceKey]=state;
+  const visibleItems=state.expanded?state.items:state.items.slice(0,BLOG_VISIBLE_COUNT);
+  list.innerHTML=visibleItems.map(item=>{
+    const title=escapeHtml(item.title||'Untitled post');
+    const link=item.link||fallbackUrl;
+    const date=fmtDate(item.pubDate||item.isoDate||'');
+    return `<li class="blog-item"><a href="${link}" target="_blank" rel="noopener noreferrer">${title}</a><div class="blog-meta">${date}</div></li>`;
+  }).join('');
+  const remaining=Math.max(state.items.length-BLOG_VISIBLE_COUNT,0);
+  const overflow=document.getElementById(`${sourceKey}-overflow`);
+  if(overflow){
+    overflow.textContent=!state.expanded&&remaining>0?`... +${remaining} more on the blog`:state.items.length>0?'':'';
+  }
+  const toggleBtn=document.querySelector(`[data-blog-toggle="${sourceKey}"]`);
+  if(toggleBtn){
+    const showToggle=state.items.length>BLOG_VISIBLE_COUNT;
+    toggleBtn.hidden=!showToggle;
+    if(showToggle){
+      toggleBtn.innerHTML=state.expanded
+        ?'Show less <i class="ti ti-chevron-up"></i>'
+        :'Show more <i class="ti ti-chevron-down"></i>';
+    }
+  }
+}
+
+function renderFeedError(listId,fallbackUrl){
+  const list=document.getElementById(listId);
+  if(!list)return;
+  list.innerHTML=`<li class="blog-empty">Could not load posts live. <a href="${fallbackUrl}" target="_blank" rel="noopener noreferrer">Read on platform</a>.</li>`;
+}
+
+function toggleBlogPosts(sourceKey){
+  const state=BLOG_STATE[sourceKey];
+  if(!state)return;
+  state.expanded=!state.expanded;
+  const config=BLOG_FEEDS[sourceKey];
+  renderPosts(config.listId,state.items,config.fallbackUrl);
+}
+
+document.querySelectorAll('[data-blog-toggle]').forEach(btn=>{
+  btn.addEventListener('click',()=>toggleBlogPosts(btn.dataset.blogToggle));
+});
+
+async function loadFeed({listId,fallbackUrl,rssUrl}){
+  try{
+    const endpoint=`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(rssUrl)}`;
+    const res=await fetch(endpoint);
+    if(!res.ok)throw new Error('feed unavailable');
+    const data=await res.json();
+    const items=Array.isArray(data.items)?data.items:[];
+    renderPosts(listId,items,fallbackUrl);
+  }catch(e){
+    renderFeedError(listId,fallbackUrl);
+  }
+}
+
+loadFeed(BLOG_FEEDS.substack);
+loadFeed(BLOG_FEEDS.medium);
 
 /* ── CHAT WIDGET ────────────────────────── */
 const HARDIK_CTX=`You are Hardik Goel, a Senior AI & Data Architect with 13+ years experience based in Bangalore, India. Answer in first person, be confident and specific. Keep responses to 3-5 sentences unless detail is genuinely needed.
