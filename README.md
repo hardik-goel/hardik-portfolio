@@ -187,6 +187,23 @@ Planned roadmap:
 
 ---
 
+# Blog build (SEO canonical pages)
+
+Per-post static pages live under `/blog`. They make this domain the canonical
+source of truth for each essay (own `<head>`, canonical=self, Open Graph,
+`BlogPosting` JSON-LD) while still linking out to Substack and Medium.
+
+Regenerate after publishing a new post (pulls both RSS feeds, dedupes
+cross-posts, rewrites `blog/*.html` + `sitemap.xml`):
+
+```bash
+python3 build_blog.py
+```
+
+No dependencies — Python stdlib only. Thin/placeholder posts are skipped.
+
+---
+
 # Author
 
 Hardik Goel
