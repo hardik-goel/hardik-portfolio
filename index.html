@@ -308,6 +308,8 @@ section{padding:5rem clamp(1.5rem,6vw,4rem)}
 .status-build{background:var(--purple-d);color:var(--purple);border:1px solid rgba(167,139,250,.3)}
 .proj-name{font-size:15px;font-weight:600;color:#fff}
 .proj-desc{font-size:13px;color:var(--text2);line-height:1.65;flex:1}
+.proj-desc code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;color:var(--text);background:rgba(255,255,255,.05);padding:1px 5px;border-radius:5px}
+.proj-attr{color:var(--text3);font-weight:500;font-style:italic}
 .proj-tags{display:flex;flex-wrap:wrap;gap:5px}
 .tag{padding:2px 8px;border-radius:5px;font-size:11px;background:var(--bg4);color:var(--text2);border:1px solid var(--bdr)}
 .proj-links{display:flex;gap:10px;flex-wrap:wrap;padding-top:.25rem;border-top:1px solid var(--bdr)}
@@ -884,6 +886,30 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
       <div class="proj-name">Enterprise AI Governance Platform</div>
       <div class="proj-desc">Autonomous compliance monitoring, alerting, and remediation for enterprise AI adoption in regulated industries. Agentic governance frameworks for finance, retail, and healthcare — built with RAG, Vector DBs, and LLMs.</div>
       <div class="proj-tags"><span class="tag">Governance</span><span class="tag">Compliance</span><span class="tag">Agentic</span><span class="tag">RAG</span></div>
+      <div class="proj-links"></div>
+    </div>
+
+    <div class="proj-card teal">
+      <div class="proj-top">
+        <div class="proj-icon">🔎</div>
+        <span class="status-badge status-live">Open Source</span>
+      </div>
+      <div class="proj-name">http-queryable</div>
+      <div class="proj-desc">Node/TypeScript implementation of the HTTP <code>QUERY</code> method (RFC&nbsp;10008) with body-aware caching — safe, idempotent reads that carry complex payloads without URL-length limits or POST's caching side effects. Express, Fastify and raw <code>http</code> adapters, an isomorphic client with auto-retry, and RFC-compliant cache keying that never yields false hits.</div>
+      <div class="proj-tags"><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">HTTP Caching</span><span class="tag">RFC 10008</span><span class="tag">Express</span><span class="tag">Fastify</span></div>
+      <div class="proj-links">
+        <a href="https://github.com/hardik-goel/http-queryable" class="plink" target="_blank"><i class="ti ti-brand-github"></i> GitHub</a>
+      </div>
+    </div>
+
+    <div class="proj-card amber">
+      <div class="proj-top">
+        <div class="proj-icon">🚚</div>
+        <span class="status-badge status-build">Advisory · FDE</span>
+      </div>
+      <div class="proj-name">Distribution Management System</div>
+      <div class="proj-desc">Forward-deployed engineering on a distribution-management platform (DMS) — order-to-delivery flows, inventory and route data pipelines, and analytics for a distribution client. Occasional advisory engagement delivered through <span class="proj-attr">GroundsTruth</span>, part of <span class="proj-attr">bookmymedia.in</span>, for <span class="proj-attr">Ottimo</span>.</div>
+      <div class="proj-tags"><span class="tag">FDE</span><span class="tag">DMS</span><span class="tag">Data Pipelines</span><span class="tag">Analytics</span></div>
       <div class="proj-links"></div>
     </div>
 
