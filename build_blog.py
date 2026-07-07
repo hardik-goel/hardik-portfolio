@@ -162,6 +162,11 @@ color:var(--text2);font-size:14px}
 .postlist li{padding:20px 0;border-bottom:1px solid var(--bdr)}
 .postlist h2{margin:0 0 6px;font-size:1.25rem}
 .postlist .meta{margin:0}
+.related{margin-top:56px}
+.related h2{font-size:1.05rem;color:var(--text2);border-top:1px solid var(--bdr);
+padding-top:28px;margin-bottom:8px}
+.related .postlist li{padding:12px 0;border-bottom:none}
+.related .postlist a{font-weight:500}
 """
 
 
@@ -205,7 +210,7 @@ def excerpt(body, n=160):
     return (text[:n].rsplit(" ", 1)[0] + "…") if len(text) > n else text
 
 
-def build_post_page(p):
+def build_post_page(p, related):
     desc = excerpt(p["body"])
     same_as = ",\n    ".join(f'"{u}"' for u in p["sources"].values())
     jsonld = f"""{{
@@ -228,12 +233,25 @@ def build_post_page(p):
         f'<a href="{u}" target="_blank" rel="noopener noreferrer">Read on {plat} ↗</a>'
         for plat, u in p["sources"].items()
     )
+    related_html = ""
+    if related:
+        items = "".join(
+            f'<li><a href="{r["url"]}">{html.escape(r["title"])}</a>'
+            f'<span class="meta"> · {r["date"]}</span></li>'
+            for r in related
+        )
+        related_html = f"""<nav class="related" aria-label="More posts">
+<h2>Read next</h2>
+<ul class="postlist">{items}</ul>
+<p><a href="/blog/">← All posts</a> · <a href="/">Portfolio home</a></p>
+</nav>"""
     return head(p["title"], desc, p["url"], p["image"], jsonld) + f"""<article>
 <h1>{html.escape(p['title'])}</h1>
 <div class="meta">{p['date']} · by {AUTHOR}</div>
 <div class="sources">{src_links}</div>
 {p['body']}
 </article>
+{related_html}
 <div class="foot">Originally shared on {', '.join(p['sources'].keys())}. Canonical home: this page.<br>
 More at <a href="/">hardikgoel portfolio</a>.</div>
 </div>
@@ -311,11 +329,21 @@ def main():
         os.remove(stale)
     with open(os.path.join(OUT_DIR, "blog.css"), "w", encoding="utf-8") as f:
         f.write(CSS)
-    for p in posts:
+    for i, p in enumerate(posts):
+        related = [x for x in posts if x["slug"] != p["slug"]][:4]
         with open(os.path.join(OUT_DIR, f"{p['slug']}.html"), "w", encoding="utf-8") as f:
-            f.write(build_post_page(p))
+            f.write(build_post_page(p, related))
     with open(os.path.join(OUT_DIR, "index.html"), "w", encoding="utf-8") as f:
         f.write(build_index_page(posts))
+    # Static feed for the homepage blog section (replaces client-side rss2json call).
+    import json as _json
+    feed = [{
+        "title": p["title"], "url": f"/{OUT_DIR}/{p['slug']}.html",
+        "date": p["date"], "iso": p["iso"],
+        "platforms": list(p["sources"].keys()),
+    } for p in posts]
+    with open(os.path.join(OUT_DIR, "posts.json"), "w", encoding="utf-8") as f:
+        _json.dump(feed, f, ensure_ascii=False, indent=1)
     write_sitemap(posts)
     print(f"Wrote {len(posts)} post pages + blog/index.html + blog/blog.css + sitemap.xml")
 

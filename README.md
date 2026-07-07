@@ -202,6 +202,20 @@ python3 build_blog.py
 
 No dependencies — Python stdlib only. Thin/placeholder posts are skipped.
 
+# Self-hosted fonts (perf)
+
+Fonts and icons are vendored under `resources/fonts/` so the page makes zero
+external CDN calls (Google Fonts + jsdelivr removed). Inter/JetBrains Mono use
+the latin woff2 subsets; the Tabler icon webfont is subset from 829KB down to
+only the ~30 icons the page uses (~7KB).
+
+Rerun only if you add a new icon or font weight (needs `fonttools`):
+
+```bash
+pip install fonttools brotli
+python3 build_fonts.py
+```
+
 ---
 
 # Author

@@ -31,3 +31,8 @@ color:var(--text2);font-size:14px}
 .postlist li{padding:20px 0;border-bottom:1px solid var(--bdr)}
 .postlist h2{margin:0 0 6px;font-size:1.25rem}
 .postlist .meta{margin:0}
+.related{margin-top:56px}
+.related h2{font-size:1.05rem;color:var(--text2);border-top:1px solid var(--bdr);
+padding-top:28px;margin-bottom:8px}
+.related .postlist li{padding:12px 0;border-bottom:none}
+.related .postlist a{font-weight:500}
