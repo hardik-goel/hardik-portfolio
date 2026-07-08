@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Hardik Goel — Resume | AI &amp; Data Platform Architect</title>
+<meta name="description" content="Resume of Hardik Goel — AI &amp; Data Platform Architect (Technical Architect SDE3, Tesco). 12+ years across enterprise data, MLOps governance, and production GenAI. Bangalore, India.">
+<link rel="canonical" href="https://hardik-portfolio-rho.vercel.app/resume">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Hardik Goel">
+
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://hardik-portfolio-rho.vercel.app/resume">
+<meta property="og:title" content="Hardik Goel — Resume | AI &amp; Data Platform Architect">
+<meta property="og:description" content="12+ years across enterprise data, MLOps governance, and production GenAI. £3.5B platform ownership at Tesco.">
+<meta property="og:image" content="https://hardik-portfolio-rho.vercel.app/resources/hardik.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hardik Goel — Resume">
+<meta name="twitter:description" content="AI &amp; Data Platform Architect — 12+ years, £3.5B platform, MLOps governance, production GenAI.">
+<meta name="twitter:image" content="https://hardik-portfolio-rho.vercel.app/resources/hardik.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Hardik Goel",
+  "jobTitle": "AI & Data Platform Architect",
+  "url": "https://hardik-portfolio-rho.vercel.app/",
+  "image": "https://hardik-portfolio-rho.vercel.app/resources/hardik.jpg",
+  "email": "mailto:hardik.goel214@gmail.com",
+  "address": { "@type": "PostalAddress", "addressLocality": "Bangalore", "addressCountry": "India" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Uttar Pradesh Technical University" },
+  "worksFor": { "@type": "Organization", "name": "Tesco" },
+  "knowsAbout": ["Agentic AI","MLOps Governance","Data Engineering","LLMs","RAG","Apache Spark","Kafka","Azure ML","Platform Architecture"],
+  "sameAs": [
+    "https://www.linkedin.com/in/hardik-goel-a6334936/",
+    "https://github.com/hardik-goel",
+    "https://goelh.substack.com/",
+    "https://medium.com/@hardik.goel214"
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="/resources/fonts/vendor.css">
+<style>
+:root{
+  --bg:#06101e;--panel:#0b1828;--bg3:#101f33;
+  --blue:#4a8cf7;--blue-d:rgba(74,140,247,.12);
+  --teal:#2dd4bf;--amber:#f5a623;
+  --ink:#ccd8eb;--ink2:#8398b5;--ink3:#55647d;
+  --line:rgba(255,255,255,.09);--line2:rgba(255,255,255,.14);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--ink);
+  line-height:1.55;font-size:14px;-webkit-font-smoothing:antialiased;
+}
+
+/* ── ACTION BAR (screen only) ─────────────── */
+.bar{
+  position:sticky;top:0;z-index:20;display:flex;justify-content:space-between;align-items:center;
+  gap:12px;padding:12px clamp(1rem,4vw,2rem);
+  background:rgba(6,16,30,.85);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+.bar .brand{font-weight:600;color:#fff;font-size:14px;letter-spacing:-.01em}
+.bar .brand span{color:var(--blue)}
+.bar-actions{display:flex;gap:8px}
+.btn{
+  padding:7px 14px;border-radius:9px;font-size:12.5px;font-weight:500;
+  border:1px solid var(--line2);color:var(--ink);transition:.15s;cursor:pointer;
+  display:inline-flex;align-items:center;gap:6px;text-decoration:none;background:none;font-family:inherit;
+}
+.btn:hover{border-color:var(--blue);color:#fff;background:var(--blue-d)}
+.btn-pri{background:var(--blue);border-color:var(--blue);color:#fff}
+.btn-pri:hover{opacity:.9;background:var(--blue)}
+
+/* ── SHEET ────────────────────────────────── */
+.sheet{
+  max-width:900px;margin:2rem auto;padding:clamp(1.5rem,4vw,3rem);
+  background:var(--panel);border:1px solid var(--line);border-radius:16px;
+}
+
+/* Header */
+.rh-name{
+  font-size:clamp(30px,6vw,42px);font-weight:700;letter-spacing:-.02em;line-height:1.05;
+  background:linear-gradient(120deg,#fff 0%,#a9c6ff 55%,var(--blue) 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.rh-title{margin-top:8px;font-size:15px;font-weight:500;color:var(--teal)}
+.rh-meta{margin-top:10px;font-size:12.5px;color:var(--ink2);display:flex;flex-wrap:wrap;gap:6px 14px}
+.rh-meta a{color:var(--ink2);text-decoration:none;border-bottom:1px solid transparent;transition:.15s}
+.rh-meta a:hover{color:var(--blue);border-color:var(--blue)}
+.rh-meta .sep{color:var(--line2)}
+
+/* Section */
+.sec{margin-top:1.9rem}
+.sec-h{
+  font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);
+  padding-bottom:7px;border-bottom:1px solid var(--line);margin-bottom:1rem;
+}
+.summary{color:var(--ink);font-size:13.5px;line-height:1.65}
+.summary strong{color:#fff;font-weight:600}
+
+.focus{display:flex;flex-wrap:wrap;gap:7px}
+.chip{
+  font-size:11.5px;font-weight:500;color:var(--ink);padding:4px 11px;
+  border:1px solid var(--line2);border-radius:20px;white-space:nowrap;
+}
+.chip.k{color:var(--blue);border-color:rgba(74,140,247,.4);background:var(--blue-d)}
+
+/* Competencies */
+.comp{display:grid;grid-template-columns:170px 1fr;gap:.55rem 1.1rem;font-size:12.5px}
+.comp dt{font-weight:600;color:#fff}
+.comp dd{color:var(--ink2)}
+
+/* Experience */
+.job{margin-bottom:1.5rem;break-inside:avoid}
+.job:last-child{margin-bottom:0}
+.job-top{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:2px 12px}
+.job-co{font-size:14.5px;font-weight:700;color:#fff}
+.job-co .role{font-weight:500;color:var(--ink);font-size:13.5px}
+.job-when{font-size:12px;color:var(--ink2);font-family:'JetBrains Mono',monospace;white-space:nowrap}
+.job-where{font-size:11.5px;color:var(--ink3);margin-top:1px}
+.job-lead{font-size:12.5px;color:var(--ink2);font-style:italic;margin:6px 0 8px}
+.sub-h{font-size:12px;font-weight:600;color:var(--teal);margin:9px 0 5px}
+ul.b{list-style:none;display:flex;flex-direction:column;gap:5px}
+ul.b li{position:relative;padding-left:15px;font-size:12.5px;color:var(--ink)}
+ul.b li::before{content:"";position:absolute;left:2px;top:8px;width:5px;height:5px;border-radius:50%;background:var(--blue)}
+ul.b li strong{color:#fff;font-weight:600}
+.m{color:var(--teal);font-weight:600;font-variant-numeric:tabular-nums}
+
+/* Projects */
+.proj{margin-bottom:1.1rem;break-inside:avoid}
+.proj-h{font-size:13px;font-weight:600;color:#fff}
+.proj-h .badge{font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--amber);border:1px solid rgba(245,166,35,.35);padding:1px 7px;border-radius:20px;margin-left:8px;vertical-align:middle}
+.proj-h .badge.oss{color:var(--teal);border-color:rgba(45,212,191,.35)}
+.proj-sub{font-size:12px;color:var(--ink2);font-style:italic;margin:2px 0 5px}
+.proj-links{font-size:11.5px;margin-top:3px}
+.proj-links a{color:var(--blue);text-decoration:none;border-bottom:1px solid transparent}
+.proj-links a:hover{border-color:var(--blue)}
+
+/* Two-col lists (education/certs) */
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:.5rem 2rem;font-size:12.5px}
+.cert{display:flex;justify-content:space-between;gap:12px;color:var(--ink)}
+.cert .yr{color:var(--ink3);font-family:'JetBrains Mono',monospace;font-size:11px;white-space:nowrap}
+.edu-deg{font-weight:600;color:#fff;font-size:13px}
+.edu-sub{color:var(--ink2);font-size:12px}
+
+.foot{margin-top:2rem;padding-top:1rem;border-top:1px solid var(--line);font-size:11px;color:var(--ink3);text-align:center}
+.foot a{color:var(--ink2);text-decoration:none;border-bottom:1px solid var(--line2)}
+
+/* ── PRINT / PDF ──────────────────────────── */
+@media print{
+  @page{size:A4;margin:12mm 13mm}
+  html,body{background:#fff !important;color:#1a2433 !important;font-size:10.2px;line-height:1.4}
+  .bar{display:none !important}
+  .sheet{max-width:none;margin:0;padding:0;background:#fff !important;border:none;border-radius:0}
+  .rh-name{-webkit-text-fill-color:#0b3a8f;color:#0b3a8f;background:none;font-size:26px}
+  .rh-title{color:#0b7d70}
+  .rh-meta,.rh-meta a{color:#33445c}
+  .sec{margin-top:12px}
+  .sec-h{color:#0b3a8f;border-color:#c9d4e4}
+  .summary,.summary strong,ul.b li,ul.b li strong,.comp dt,.job-co,.job-co .role,.proj-h,.edu-deg{color:#1a2433 !important}
+  .comp dd,.job-lead,.proj-sub,.job-where,.job-when,.cert .yr,.edu-sub,.focus .chip{color:#40506a !important}
+  .sub-h,.m{color:#0b7d70 !important}
+  .chip{border-color:#c9d4e4}
+  .chip.k{color:#0b3a8f;background:#eef3fd;border-color:#b9ccf0}
+  ul.b li::before{background:#0b3a8f}
+  .proj-h .badge{color:#a06a00;border-color:#e0c48a}
+  .proj-h .badge.oss{color:#0b7d70;border-color:#a9dcd4}
+  .proj-links a,.rh-meta a{color:#0b3a8f}
+  a{text-decoration:none}
+  .foot{color:#8494ab;border-color:#c9d4e4}
+  .job,.proj,.sec{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <div class="brand">HG<span>.</span> Resume</div>
+  <div class="bar-actions">
+    <a class="btn" href="/">← Portfolio</a>
+    <button class="btn btn-pri" onclick="window.print()">Download PDF ↓</button>
+  </div>
+</div>
+
+<main class="sheet">
+
+  <!-- HEADER -->
+  <header>
+    <h1 class="rh-name">Hardik Goel</h1>
+    <div class="rh-title">AI &amp; Data Platform Architect · Technical Architect (SDE3) · 12+ Years</div>
+    <div class="rh-meta">
+      <span>Bangalore, India</span><span class="sep">·</span>
+      <a href="mailto:hardik.goel214@gmail.com">hardik.goel214@gmail.com</a><span class="sep">·</span>
+      <a href="https://hardik-portfolio-rho.vercel.app/" target="_blank" rel="noopener">Portfolio</a><span class="sep">·</span>
+      <a href="https://github.com/hardik-goel" target="_blank" rel="noopener">GitHub</a><span class="sep">·</span>
+      <a href="https://www.linkedin.com/in/hardik-goel-a6334936/" target="_blank" rel="noopener">LinkedIn</a><span class="sep">·</span>
+      <a href="https://goelh.substack.com/" target="_blank" rel="noopener">Substack</a><span class="sep">·</span>
+      <a href="https://medium.com/@hardik.goel214" target="_blank" rel="noopener">Medium</a>
+    </div>
+  </header>
+
+  <!-- SUMMARY -->
+  <section class="sec">
+    <div class="sec-h">Professional Summary</div>
+    <p class="summary"><strong>AI &amp; Data Platform Architect</strong> with 12+ years owning platform strategy and end-to-end delivery across enterprise data, ML, and GenAI. Architecture ownership from reference design through production governance in high-stakes domains — <strong>retail procurement (£3.5B)</strong>, <strong>fintech incentives (SLA 15d → 3d)</strong>, and airline data governance. A rare practitioner at the <strong>enterprise ↔ GenAI</strong> intersection: building scalable data platforms and MLOps governance frameworks while shipping production-grade agentic-AI systems, intelligent orchestration, and LLM-powered engineering workflows. Open-source contributor, published author, and decade-long AI educator.</p>
+  </section>
+
+  <!-- FOCUS -->
+  <section class="sec">
+    <div class="sec-h">Current Focus</div>
+    <div class="focus">
+      <span class="chip k">Agentic AI Systems</span>
+      <span class="chip k">AI-Augmented Engineering</span>
+      <span class="chip k">MLOps Governance</span>
+      <span class="chip">Intelligent Routing &amp; Orchestration</span>
+      <span class="chip">LLM-Powered Enterprise Automation</span>
+    </div>
+  </section>
+
+  <!-- COMPETENCIES -->
+  <section class="sec">
+    <div class="sec-h">Core Competencies</div>
+    <dl class="comp">
+      <dt>AI &amp; GenAI</dt><dd>Agentic AI, RAG, LLMs (GPT / Claude / Gemini), MCP, Vector Databases, Embeddings, Multimodal Agents, Conversational AI, AI Orchestration</dd>
+      <dt>MLOps &amp; Governance</dt><dd>MLflow, SHAP, PSI Drift Monitoring, Model Registry, Feature Stores, Azure ML, DQ Gates, Audit Lineage (Purview), Champion-Challenger Deployment</dd>
+      <dt>Data Engineering</dt><dd>Apache Spark, Kafka, Airflow, DBT, Databricks, Apache Hudi, Flink, NiFi, Sqoop, Delta Lake, Data Mesh, Lakehouse, CDC, Streaming</dd>
+      <dt>Cloud &amp; Infra</dt><dd>AWS (EMR, Lambda, Glue, Athena, Redshift, S3, RDS, OpenSearch, ECS), Azure (AZ-900), Databricks, Docker, Kubernetes, CI/CD, GitOps</dd>
+      <dt>Languages</dt><dd>Python (PySpark, Pandas, NumPy, scikit-learn), Java (SpringBoot), SQL, Scala</dd>
+      <dt>Architecture</dt><dd>Platform Strategy, Reference Architecture, Reusable Framework Design, Engineering Standards, HLD / LLD, Data Contracts, Schema Evolution</dd>
+      <dt>Leadership</dt><dd>Architecture Ownership, Engineering Governance, Cross-functional Stakeholder Management, Team Building (14-member teams), Mentoring, Intrapreneurship</dd>
+    </dl>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="sec">
+    <div class="sec-h">Professional Experience</div>
+
+    <div class="job">
+      <div class="job-top">
+        <div class="job-co">Tesco <span class="role">— Technical Architect (SDE3)</span></div>
+        <div class="job-when">Jan 2025 – Present</div>
+      </div>
+      <div class="job-where">Bangalore, India</div>
+      <p class="job-lead">After leading a 14-engineer org at Paytm, chose a deep individual-contributor architect track — designing and owning AI platforms hands-on. End-to-end architecture ownership of an AI commodity-forecasting platform supporting a <strong>£3.5B procurement domain</strong>.</p>
+      <div class="sub-h">Platform Architecture &amp; MLOps Governance</div>
+      <ul class="b">
+        <li>Architected and delivered a production-grade AI commodity forecasting platform supporting <strong>£3.5B in annual procurement</strong> across multiple commodities and prediction horizons.</li>
+        <li>Designed scalable MLOps workflows on Azure ML (MLflow, SHAP, PSI drift monitoring); established governed deployment pipelines with DQ gates, model metadata registries, security scanning, audit logs, Microsoft Purview lineage, and Maker-Checker controls.</li>
+        <li>Defined and enforced engineering governance standards across Data Engineering and ML — modular architecture, typed interfaces, reusable pipeline templates, and automated pytest coverage gates — improving deployment consistency and platform reliability.</li>
+        <li>Built reusable metadata-driven data and ML pipelines integrating LSEG and enterprise RDBMS sources, reducing commodity onboarding effort and improving scalability across new forecasting use cases.</li>
+        <li>Delivered stakeholder analytics dashboards and data enrichment, improving commercial visibility into commodity trends and model outputs.</li>
+      </ul>
+      <div class="sub-h">AI-Augmented Engineering &amp; Agentic Framework Design</div>
+      <ul class="b">
+        <li><strong>Pioneered AI-augmented engineering workflows</strong> using Claude and GPT agents for automated code review, test generation, documentation, and pipeline scaffolding — accelerating delivery velocity.</li>
+        <li>Designed a <strong>persona-based agentic framework</strong> with specialised AI roles for Data Engineering, ML Review, Security, and MLOps Governance — one of the earliest enterprise implementations of role-based AI agents in a production data platform.</li>
+        <li>Authored AI-enforceable markdown standards enabling automated enforcement of coding practices, security guardrails, and quality gates through structured context orchestration and RAG workflows.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div class="job-co">Paytm <span class="role">— Data Engineering Manager</span></div>
+        <div class="job-when">Jan 2022 – Jan 2025</div>
+      </div>
+      <div class="job-where">Bangalore &amp; Noida, India</div>
+      <p class="job-lead">Led a <strong>14-member engineering team</strong> owning data-platform strategy, architecture, and delivery across incentive management, merchant analytics, and GenAI product initiatives.</p>
+      <div class="sub-h">Incentive Management Platform</div>
+      <ul class="b">
+        <li>Architected a high-throughput incentive processing platform: reduced payment SLA from <span class="m">15 days → 3 days</span>, improved accuracy to <span class="m">&gt;97%</span>, and cut attrition by <span class="m">40%</span>.</li>
+        <li>Designed rule-engine pipelines using Airflow, AWS EMR, PySpark, and MongoDB; leveraged DBT for SQL transformations and ran Databricks DBR impact assessment.</li>
+        <li>Drove <span class="m">&gt;50%</span> cost reduction on Incentives; architected PGOLAP on Databricks DBR, cutting costs by <span class="m">&gt;70%</span> for 110M daily events at Dream11 scale (1.8B events/day).</li>
+        <li>Built <strong>FSEBuddy</strong> — a self-service platform enabling Product-team autonomy and reducing engineering dependency for routine data tasks.</li>
+        <li>Delivered <strong>CustomerEchoEase</strong> — a GenAI-powered customer-insights solution — as an internal innovation initiative.</li>
+      </ul>
+      <div class="sub-h">Merchant Analytics Platform</div>
+      <ul class="b">
+        <li>Architected a real-time merchant analytics platform: drove <span class="m">&gt;40%</span> offline merchant sales growth and <span class="m">&gt;30%</span> cross-sell-rate uplift.</li>
+        <li>Engineered high-throughput event processing with Kafka, NiFi, Spark, Apache Hudi, and ElasticSearch to power sub-second API queries for merchant dashboards.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div class="job-co">Impetus Technologies <span class="role">— Senior Software Engineer</span></div>
+        <div class="job-when">Feb 2020 – Jan 2022</div>
+      </div>
+      <div class="job-where">Gurgaon, India</div>
+      <ul class="b">
+        <li><strong>ICON</strong> (Ingest, Catalog, Optimize, Notify) — architected a data-lake governance framework for a US airline, reducing ingestion TAT by <span class="m">&gt;40%</span> and error rates by <span class="m">&gt;90%</span> using AWS Lambda, Glue, Athena, RDS, PySpark.</li>
+        <li>Delivered <span class="m">~99%</span> latency reduction (<span class="m">2s → 20ms</span>) on a sensitive-data search engine using Apache Solr + ELK; storage tiering with Cassandra for cold parameters and Kafka as data backbone.</li>
+        <li>Built real-time sensor anomaly-detection dashboards (Kafka, Flink, QuickSight, Redshift Spectrum, DBT, MWAA, Apache Beam) for a semiconductor client; built an internal NLP sentiment analyser (NLTK) outperforming VADER benchmarks.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div class="job-co">Cognizant <span class="role">— Associate (Big Data Engineer)</span></div>
+        <div class="job-when">Apr 2018 – Jan 2020</div>
+      </div>
+      <div class="job-where">Gurgaon, India</div>
+      <ul class="b">
+        <li>Anti-Money-Laundering (European bank): reduced AML false positives from 91%, enabling faster regulatory reporting and cutting the monthly investigation backlog against a 30-day SLA.</li>
+        <li>Implemented an ML pipeline using LightGBM (Paylay model) with ingestion from Oracle, Teradata, and sandpits via Sqoop, Oozie, Hive/Impala, and Spark pre-processing.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-top">
+        <div class="job-co">Accenture <span class="role">— Software Engineering Analyst</span></div>
+        <div class="job-when">Oct 2014 – Apr 2018</div>
+      </div>
+      <div class="job-where">Pune &amp; Gurgaon, India</div>
+      <ul class="b">
+        <li>Built CDR/UDR ingestion pipelines for a US telecom client (postpaid) using Kafka, Spark, and Hive.</li>
+        <li>Delivered MVNO mobile automation frameworks (Selenium WebDriver, Appium, TestNG, Jenkins) and led cross-functional sprint, system, and UAT testing across US &amp; UK telecom clients.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="sec">
+    <div class="sec-h">Selected AI &amp; Open-Source Projects</div>
+
+    <div class="proj">
+      <div class="proj-h">Switchboard <span class="badge oss">Open Source</span></div>
+      <div class="proj-sub">Provider-agnostic AI model routing &amp; orchestration framework.</div>
+      <ul class="b">
+        <li>Provider-agnostic architecture routing across OpenAI, Anthropic, Google, and other LLMs, with fallback chains, cost-optimised routing, and latency-aware model selection — designed for enterprise AI-platform integration.</li>
+      </ul>
+      <div class="proj-links"><a href="https://github.com/hardik-goel/Switchboard" target="_blank" rel="noopener">GitHub ↗</a></div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-h">AudioSummariser <span class="badge oss">PyPI</span></div>
+      <div class="proj-sub">GenAI audio-intelligence pipeline — published package.</div>
+      <ul class="b">
+        <li>End-to-end audio-to-insight pipeline: transcription → embedding → chunking → summarisation → conversational RAG retrieval; integrates vector-DB retrieval and LLM-powered sentiment analysis. Published to PyPI.</li>
+      </ul>
+      <div class="proj-links"><a href="https://github.com/hardik-goel/Audio-Summariser" target="_blank" rel="noopener">GitHub ↗</a> · <a href="https://pypi.org/project/audiosummariser/" target="_blank" rel="noopener">PyPI ↗</a></div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-h">http-queryable <span class="badge oss">Open Source</span></div>
+      <div class="proj-sub">Node/TypeScript implementation of the HTTP QUERY method (RFC 10008).</div>
+      <ul class="b">
+        <li>Body-aware caching for safe, idempotent reads that carry complex payloads without URL-length limits or POST's caching side effects; Express / Fastify / raw-http adapters, an isomorphic client with auto-retry, and RFC-compliant cache keying that never yields false hits.</li>
+      </ul>
+      <div class="proj-links"><a href="https://github.com/hardik-goel/http-queryable" target="_blank" rel="noopener">GitHub ↗</a></div>
+    </div>
+
+    <div class="proj">
+      <div class="proj-h">CommodityBuddy <span class="badge">AI Product</span></div>
+      <div class="proj-sub">GenAI assistant for commodity forecasting &amp; procurement intelligence.</div>
+      <ul class="b">
+        <li>Conversational AI over forecasting outputs enabling non-technical stakeholders to query model insights in natural language — structured data → embeddings → RAG → conversational interface.</li>
+      </ul>
+    </div>
+
+    <div class="proj">
+      <div class="proj-h">Enterprise AI Governance Platform <span class="badge">Stealth</span></div>
+      <div class="proj-sub">AI-native governance, compliance &amp; autonomous operations for regulated industries.</div>
+      <ul class="b">
+        <li>Agentic compliance workflows with autonomous monitoring, alerting, and remediation; governance frameworks for finance, retail, and healthcare — built with agents, RAG, vector DBs, and LLMs.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- EDUCATION + CERTS -->
+  <section class="sec">
+    <div class="sec-h">Education</div>
+    <div class="edu-deg">B.Tech — Computer Science &amp; Engineering</div>
+    <div class="edu-sub">Uttar Pradesh Technical University, Lucknow · 2010 – 2014</div>
+  </section>
+
+  <section class="sec">
+    <div class="sec-h">Certifications</div>
+    <div class="grid2">
+      <div class="cert"><span>Amazon Q Developer Fundamentals</span><span class="yr">Oct 2025</span></div>
+      <div class="cert"><span>Astronomer — DAG Authoring, Airflow 3</span><span class="yr">Oct 2025</span></div>
+      <div class="cert"><span>Astronomer — Apache Airflow 3</span><span class="yr">Jul 2025</span></div>
+      <div class="cert"><span>Databricks Generative AI Fundamentals</span><span class="yr">Jul 2023</span></div>
+      <div class="cert"><span>Databricks Lakehouse Fundamentals</span><span class="yr">Aug 2022</span></div>
+      <div class="cert"><span>Databricks Associate Dev — Spark 3.0</span><span class="yr">Jul 2022</span></div>
+      <div class="cert"><span>Confluent Fundamentals — Apache Kafka</span><span class="yr">Feb 2021</span></div>
+      <div class="cert"><span>Microsoft Azure AZ-900</span><span class="yr">Aug 2020</span></div>
+      <div class="cert"><span>Teradata Vantage Associate</span><span class="yr">Jun 2020</span></div>
+      <div class="cert"><span>IBM Spark Level-1</span><span class="yr">Oct 2019</span></div>
+    </div>
+  </section>
+
+  <!-- BEYOND -->
+  <section class="sec">
+    <div class="sec-h">Beyond Engineering</div>
+    <ul class="b">
+      <li><strong>Published Author</strong> — <em>Forgotten By Design — The Silent Epidemic of Digital Dementia</em> (CleverFox Publishing, Oct 2025); eBook &amp; paperback on Amazon IN &amp; US.</li>
+      <li><strong>AI / Data Educator &amp; Curriculum Architect</strong> — designed and delivered end-to-end AI &amp; Data Engineering courses across UpGrad, Analytics Vidhya, Ducat, GUVI, DataCouch, ToolsQA, and Interview Kickstart; PAN-India corporate workshops and college masterclasses. A decade of parallel teaching.</li>
+      <li><strong>Speaker &amp; Community</strong> — keynote panelist, ElasticSearch CXO Fusion (GenAI track); guest lecturer; podcast guest; technical writer for Times of India, ToolsQA, and other publications.</li>
+    </ul>
+  </section>
+
+  <div class="foot">
+    Full portfolio, projects &amp; writing → <a href="https://hardik-portfolio-rho.vercel.app/">hardik-portfolio-rho.vercel.app</a>
+  </div>
+
+</main>
+</body>
+</html>
