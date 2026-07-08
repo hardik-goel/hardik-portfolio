@@ -310,6 +310,12 @@ section{padding:5rem clamp(1.5rem,6vw,4rem)}
 .proj-desc{font-size:13px;color:var(--text2);line-height:1.65;flex:1}
 .proj-desc code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11.5px;color:var(--text);background:rgba(255,255,255,.05);padding:1px 5px;border-radius:5px}
 .proj-attr{color:var(--text3);font-weight:500;font-style:italic}
+/* ── CREDIBILITY STRIP ─────────────────────── */
+.proof-strip{padding:2rem clamp(1rem,5vw,3rem);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr);background:var(--bg2)}
+.proof-label{text-align:center;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--text3);margin-bottom:1rem}
+.proof-row{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem .75rem;max-width:1000px;margin:0 auto}
+.proof-item{font-size:12.5px;font-weight:500;color:var(--text2);padding:5px 12px;border:1px solid var(--bdr2);border-radius:var(--r);white-space:nowrap;transition:.15s}
+.proof-item:hover{color:#fff;border-color:var(--blue);background:var(--blue-d)}
 .proj-tags{display:flex;flex-wrap:wrap;gap:5px}
 .tag{padding:2px 8px;border-radius:5px;font-size:11px;background:var(--bg4);color:var(--text2);border:1px solid var(--bdr)}
 .proj-links{display:flex;gap:10px;flex-wrap:wrap;padding-top:.25rem;border-top:1px solid var(--bdr)}
@@ -560,7 +566,7 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
       <div class="h-stat"><span class="h-stat-val">~2</span><span class="h-stat-lbl">Decades of experience</span></div>
       <div class="h-stat"><span class="h-stat-val">£3.5B</span><span class="h-stat-lbl">Platform ownership</span></div>
       <div class="h-stat"><span class="h-stat-val">Decade+</span><span class="h-stat-lbl">Years as AI educator</span></div>
-      <div class="h-stat"><span class="h-stat-val">2</span><span class="h-stat-lbl">OSS AI tools shipped</span></div>
+      <div class="h-stat"><span class="h-stat-val">3</span><span class="h-stat-lbl">OSS tools shipped</span></div>
     </div>
     <div class="hero-btns">
       <a class="btn-pri" href="#projects"><i class="ti ti-bolt"></i> View Projects</a>
@@ -578,6 +584,23 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
        width="400" height="400" loading="eager"
        alt="Hardik Goel — AI & Data Architect, GenAI systems builder, Bangalore"
        onerror="this.style.display='none'">
+  </div>
+</section>
+
+<!-- ── CREDIBILITY STRIP ─────────────────── -->
+<section id="proof" class="proof-strip">
+  <div class="proof-label fade-up">Taught, spoke &amp; published across</div>
+  <div class="proof-row fade-up">
+    <span class="proof-item">UpGrad</span>
+    <span class="proof-item">Analytics Vidhya</span>
+    <span class="proof-item">GUVI</span>
+    <span class="proof-item">DataCouch</span>
+    <span class="proof-item">Interview Kickstart</span>
+    <span class="proof-item">Ducat</span>
+    <span class="proof-item">Keynote · ElasticSearch CXO Fusion</span>
+    <span class="proof-item">Times of India</span>
+    <span class="proof-item">ToolsQA</span>
+    <span class="proof-item">CleverFox Publishing</span>
   </div>
 </section>
 
@@ -667,6 +690,7 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
         </button>
         <div class="tl-details">
           <ul class="tl-bullets">
+            <p style="color:var(--text2);font-style:italic;margin-bottom:.75rem">After leading a 14-engineer org at Paytm, chose a deep individual-contributor architect track — to design and own AI platforms hands-on rather than manage at a distance.</p>
             <p><strong>End-to-end architecture ownership</strong> of an AI-driven commodity forecasting platform supporting a <strong>£3.5B procurement domain</strong>, spanning MLOps governance, platform engineering, and AI-augmented engineering enablement.</p>
 
 <h4>Platform Architecture &amp; MLOps Governance</h4>
@@ -1035,7 +1059,7 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
 <section id="beyond">
   <div class="sec-label fade-up"><i class="ti ti-sparkles"></i> Beyond Engineering</div>
   <h2 class="sec-title fade-up">Community, Content & Creation</h2>
-  <p class="sec-sub fade-up">Eight years of parallel work — educating, writing, speaking, and building community alongside the corporate career.</p>
+  <p class="sec-sub fade-up">A decade of parallel work — educating, writing, speaking, and building community alongside the corporate career.</p>
   <div class="beyond-grid fade-up">
 
     <div class="beyond-card">
@@ -1171,7 +1195,7 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
 
 <script>
 /* ── TYPING ANIMATION ──────────────────── */
-const TITLES=['Senior AI & Data Architect','MLOps Platform Owner','GenAI Systems Builder','AI Educator & Author','Open Source Contributor'];
+const TITLES=['AI & Data Platform Architect','I ship governance-grade GenAI at enterprise scale','£3.5B AI forecasting platform · end-to-end','MLOps & Agentic AI, in production','Author · Educator · Open-source builder'];
 let ti=0,ci=0,del=false;
 function type(){
   const el=document.getElementById('typing-text');
@@ -1307,7 +1331,7 @@ PROJECTS: Switchboard (AI model routing OSS), AudioSummariser (GenAI audio + PyP
 
 TECH: LLMs, RAG, Vector DBs, MCP, Agentic AI, MLflow, SHAP, Azure ML, Spark, Kafka, Airflow, DBT, Databricks, AWS, Python, Java
 
-BEYOND: AI educator 8+ years (UpGrad, Analytics Vidhya, Ducat, GUVI, DataCouch, IK), book author (Forgotten By Design), YouTube/Instagram creator, keynote panelist at ElasticSearch CXO Fusion, corporate trainer PAN-India, writer for Times of India/ToolsQA
+BEYOND: AI educator 10+ years (UpGrad, Analytics Vidhya, Ducat, GUVI, DataCouch, IK), book author (Forgotten By Design), YouTube/Instagram creator, keynote panelist at ElasticSearch CXO Fusion, corporate trainer PAN-India, writer for Times of India/ToolsQA
 
 For salary questions, say you prefer to discuss in proper conversations.`;
 
