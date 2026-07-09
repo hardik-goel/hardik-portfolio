@@ -414,6 +414,20 @@ section{padding:5rem clamp(1.5rem,6vw,4rem)}
   background:var(--bg4);color:var(--text2);border:1px solid var(--bdr);
 }
 
+/* ── TESTIMONIALS ────────────────────────────── */
+.tm-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px}
+.tm-card{
+  background:var(--bg3);border:1px solid var(--bdr);border-radius:var(--r2);
+  padding:1.375rem;transition:.2s;display:flex;flex-direction:column;
+}
+.tm-card:hover{border-color:var(--bdr2);transform:translateY(-2px)}
+.tm-quote{font-size:13.5px;color:var(--text);line-height:1.7;flex:1;margin-bottom:1rem}
+.tm-quote::before{content:"\201C";color:var(--blue);font-weight:700;margin-right:1px}
+.tm-who{border-top:1px solid var(--bdr);padding-top:.875rem}
+.tm-name{font-size:13px;font-weight:600;color:#fff}
+.tm-role{font-size:11.5px;color:var(--text3);line-height:1.45;margin-top:2px}
+.tm-rel{font-size:11px;color:var(--blue);font-weight:500;margin-top:4px}
+
 /* ── CERTS ───────────────────────────────────── */
 .certs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
 .cert-card{
@@ -535,6 +549,7 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
     <a href="#blog">Blog</a>
     <a href="#skills">Skills</a>
     <a href="#beyond">Beyond</a>
+    <a href="#testimonials">Endorsements</a>
     <a href="#contact">Contact</a>
   </div>
   <button class="nav-chat" onclick="toggleChat()">
@@ -1113,6 +1128,52 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
       <div class="beyond-desc">Delivered PAN-India enterprise workshops and college masterclasses. Helped organisations transition from traditional data stacks to AI-driven architectures. Trained enterprise teams (Upward & Onward clients) and academic cohorts at graduate universities.</div>
       <div class="beyond-links">
         <a href="https://drive.google.com/file/d/1DPyR_Edswyl2mnzIPM_BybiSBBbSxaAs/view" class="blink" target="_blank"><i class="ti ti-external-link"></i> Sample session</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ───────────────────────── -->
+<section id="testimonials" style="padding-top:0">
+  <div class="sec-label fade-up"><i class="ti ti-user-star"></i> Endorsements</div>
+  <h2 class="sec-title fade-up">What Colleagues Say</h2>
+  <p class="sec-sub fade-up">Verbatim LinkedIn recommendations from managers, direct reports, and peers across Paytm, JPMorgan Chase, Walmart, and Impetus.</p>
+  <div class="tm-grid fade-up">
+
+    <div class="tm-card">
+      <div class="tm-quote">Hardik is a highly skilled and knowledgeable manager. He is not only friendly and helpful but goes above and beyond to maintain team spirit. His understanding of people's needs is outstanding, and he instills positive energy in every team member.</div>
+      <div class="tm-who">
+        <div class="tm-name">Srivatsav Veesam</div>
+        <div class="tm-role">Software Engineer III, Walmart · Ex-Paytm</div>
+        <div class="tm-rel">Reported to Hardik</div>
+      </div>
+    </div>
+
+    <div class="tm-card">
+      <div class="tm-quote">A focused and seasoned data engineer who has set things in motion for many time-sensitive deliverables. Very dependable — he doesn't hesitate to go the extra mile or collaborate across teams to get things done. Gladly recommend Hardik for all things data engineering.</div>
+      <div class="tm-who">
+        <div class="tm-name">Abhranshu Bagchi</div>
+        <div class="tm-role">Founder, Autonmis · Ex-leadership @ Paytm</div>
+        <div class="tm-rel">Managed Hardik directly</div>
+      </div>
+    </div>
+
+    <div class="tm-card">
+      <div class="tm-quote">Hardik is always the go-to person for any team member. He stays positive and adds positive energy to the team. Looking forward to working with him again.</div>
+      <div class="tm-who">
+        <div class="tm-name">Sri Harsha Atmuri</div>
+        <div class="tm-role">VP, Lead Data Engineer, JPMorgan Chase</div>
+        <div class="tm-rel">Worked with Hardik</div>
+      </div>
+    </div>
+
+    <div class="tm-card">
+      <div class="tm-quote">His leadership qualities are the best — the way he manages the team and creates a good environment for everyone to do their best work is amazing. He guides the team, shares strong ideas, and is a good leader in true terms.</div>
+      <div class="tm-who">
+        <div class="tm-name">Tejashri Marne</div>
+        <div class="tm-role">Data Engineer — PySpark, AWS, ETL</div>
+        <div class="tm-rel">Reported to Hardik</div>
       </div>
     </div>
 
