@@ -986,8 +986,21 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
 <section id="projects">
   <div class="sec-label fade-up"><i class="ti ti-code"></i> Open Source & Projects</div>
   <h2 class="sec-title fade-up">What I Build</h2>
-  <p class="sec-sub fade-up">Production AI tooling, open-source frameworks, and stealth initiatives.</p>
+  <p class="sec-sub fade-up">Production AI tooling, open-source frameworks, and client-facing builds.</p>
   <div class="proj-grid fade-up">
+
+    <div class="proj-card rose">
+      <div class="proj-top">
+        <div class="proj-icon">🛡️</div>
+        <span class="status-badge status-live">AI Governance</span>
+      </div>
+      <div class="proj-name">CompliSense AI</div>
+      <div class="proj-desc">AI governance and compliance platform for regulated industries: agentic compliance monitoring, alerting and remediation against the EU AI Act and India's DPDP Act, for finance, retail and healthcare.</div>
+      <div class="proj-tags"><span class="tag">AI Governance</span><span class="tag">EU AI Act</span><span class="tag">DPDP Act</span><span class="tag">Agentic</span><span class="tag">RAG</span></div>
+      <div class="proj-links">
+        <a href="https://complisenseai.com/" class="plink" target="_blank"><i class="ti ti-external-link"></i> complisenseai.com</a>
+      </div>
+    </div>
 
     <div class="proj-card blue">
       <div class="proj-top">
@@ -995,10 +1008,23 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
         <span class="status-badge status-live">Open Source</span>
       </div>
       <div class="proj-name">Switchboard</div>
-      <div class="proj-desc">Provider-agnostic AI model routing and orchestration framework. Dynamic fallback chains, cost-optimised routing, latency-aware model selection across OpenAI, Anthropic, and Google — designed for enterprise AI platform integration.</div>
+      <div class="proj-desc">Provider-agnostic AI model routing and orchestration framework. Dynamic fallback chains, cost-optimised routing, latency-aware model selection across OpenAI, Anthropic, and Google, designed for enterprise AI platform integration.</div>
       <div class="proj-tags"><span class="tag">Python</span><span class="tag">LLM Routing</span><span class="tag">Orchestration</span><span class="tag">OpenAI</span><span class="tag">Anthropic</span></div>
       <div class="proj-links">
         <a href="https://github.com/hardik-goel/Switchboard" class="plink" target="_blank"><i class="ti ti-brand-github"></i> GitHub</a>
+      </div>
+    </div>
+
+    <div class="proj-card teal">
+      <div class="proj-top">
+        <div class="proj-icon">🔎</div>
+        <span class="status-badge status-live">Open Source</span>
+      </div>
+      <div class="proj-name">http-queryable</div>
+      <div class="proj-desc">Node/TypeScript implementation of the HTTP <code>QUERY</code> method (RFC&nbsp;10008) with body-aware caching; adapters for Express, Fastify and raw <code>http</code> plus an isomorphic client.</div>
+      <div class="proj-tags"><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">HTTP Caching</span><span class="tag">RFC 10008</span><span class="tag">Express</span><span class="tag">Fastify</span></div>
+      <div class="proj-links">
+        <a href="https://github.com/hardik-goel/http-queryable" class="plink" target="_blank"><i class="ti ti-brand-github"></i> GitHub</a>
       </div>
     </div>
 
@@ -1008,12 +1034,34 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
         <span class="status-badge status-pypi">PyPI Published</span>
       </div>
       <div class="proj-name">AudioSummariser</div>
-      <div class="proj-desc">GenAI audio intelligence pipeline: transcription → embedding → chunking → summarisation → conversational RAG retrieval. Published as a PyPI package — production-ready for enterprise audio intelligence use cases.</div>
+      <div class="proj-desc">GenAI audio intelligence pipeline: transcription, embedding, chunking, summarisation and conversational RAG retrieval. Published as a PyPI package, production-ready for enterprise audio intelligence use cases.</div>
       <div class="proj-tags"><span class="tag">RAG</span><span class="tag">Embeddings</span><span class="tag">Vector DB</span><span class="tag">PyPI</span><span class="tag">Whisper</span></div>
       <div class="proj-links">
         <a href="https://github.com/hardik-goel/Audio-Summariser" class="plink" target="_blank"><i class="ti ti-brand-github"></i> GitHub</a>
-        <a href="https://pypi.org/project/audiosummariser/" class="plink" target="_blank"><i class="ti ti-package"></i> PyPI</a>
+        <a href="https://pypi.org/project/AudioSummariser/" class="plink" target="_blank"><i class="ti ti-package"></i> PyPI</a>
       </div>
+    </div>
+
+    <div class="proj-card amber">
+      <div class="proj-top">
+        <div class="proj-icon">🚚</div>
+        <span class="status-badge status-build">Forward Deployed</span>
+      </div>
+      <div class="proj-name">Distributor Management Platform</div>
+      <div class="proj-desc">Replaced spreadsheet-based invoicing and stock reconciliation with a GST-compliant system processing 4,150+ tax invoices and 18,000+ stock movements with full audit traceability, removing manual Excel and WhatsApp order tracking across 686 outlets and ₹1.3 Cr in GST-invoiced sales.</div>
+      <div class="proj-tags"><span class="tag">Forward Deployed</span><span class="tag">GST Compliance</span><span class="tag">Data Model</span><span class="tag">Audit Trail</span></div>
+      <div class="proj-links"></div>
+    </div>
+
+    <div class="proj-card amber">
+      <div class="proj-top">
+        <div class="proj-icon">🏨</div>
+        <span class="status-badge status-build">Forward Deployed</span>
+      </div>
+      <div class="proj-name">Hospitality Management System</div>
+      <div class="proj-desc">Multi-property hospitality management system across five properties, built directly with the owners.</div>
+      <div class="proj-tags"><span class="tag">Forward Deployed</span><span class="tag">Hospitality</span><span class="tag">Platform Build</span></div>
+      <div class="proj-links"></div>
     </div>
 
     <div class="proj-card amber">
@@ -1022,54 +1070,30 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
         <span class="status-badge status-live">AI Product</span>
       </div>
       <div class="proj-name">CommodityBuddy</div>
-      <div class="proj-desc">GenAI assistant for commodity forecasting and procurement intelligence. Natural language querying over enterprise forecasting outputs — structured data → embeddings → RAG → conversational interface for non-technical stakeholders.</div>
+      <div class="proj-desc">GenAI assistant for commodity forecasting and procurement intelligence. Natural language querying over enterprise forecasting outputs: structured data, embeddings and RAG behind a conversational interface for non-technical stakeholders.</div>
       <div class="proj-tags"><span class="tag">GenAI</span><span class="tag">RAG</span><span class="tag">Procurement AI</span><span class="tag">LLM</span></div>
+      <div class="proj-links"></div>
+    </div>
+
+    <div class="proj-card blue">
+      <div class="proj-top">
+        <div class="proj-icon">🧰</div>
+        <span class="status-badge status-live">AI Product</span>
+      </div>
+      <div class="proj-name">FSEBuddy</div>
+      <div class="proj-desc">Conversational AI over Field Service Executive onboarding data at Paytm: structured data, embeddings and RAG behind a natural-language interface for non-technical stakeholders.</div>
+      <div class="proj-tags"><span class="tag">GenAI</span><span class="tag">RAG</span><span class="tag">Self-Service Data</span><span class="tag">Embeddings</span></div>
       <div class="proj-links"></div>
     </div>
 
     <div class="proj-card purple">
       <div class="proj-top">
         <div class="proj-icon">🤖</div>
-        <span class="status-badge status-build">Active Build</span>
+        <span class="status-badge status-build">AI Platform</span>
       </div>
-      <div class="proj-name">Agentic AI SaaS</div>
-      <div class="proj-desc">Founder-led SaaS applying multi-agent orchestration to enterprise workflow automation. Specialised AI personas, MCP-based integrations, and autonomous enterprise execution. Hands-on with image-gen LLMs, voiceovers, and multimodal agents.</div>
-      <div class="proj-tags"><span class="tag">Agentic AI</span><span class="tag">MCP</span><span class="tag">Multimodal</span><span class="tag">SaaS</span></div>
-      <div class="proj-links"></div>
-    </div>
-
-    <div class="proj-card rose">
-      <div class="proj-top">
-        <div class="proj-icon">🔒</div>
-        <span class="status-badge status-stealth">Stealth</span>
-      </div>
-      <div class="proj-name">Enterprise AI Governance Platform</div>
-      <div class="proj-desc">Autonomous compliance monitoring, alerting, and remediation for enterprise AI adoption in regulated industries. Agentic governance frameworks for finance, retail, and healthcare — built with RAG, Vector DBs, and LLMs.</div>
-      <div class="proj-tags"><span class="tag">Governance</span><span class="tag">Compliance</span><span class="tag">Agentic</span><span class="tag">RAG</span></div>
-      <div class="proj-links"></div>
-    </div>
-
-    <div class="proj-card teal">
-      <div class="proj-top">
-        <div class="proj-icon">🔎</div>
-        <span class="status-badge status-live">Open Source</span>
-      </div>
-      <div class="proj-name">http-queryable</div>
-      <div class="proj-desc">Node/TypeScript implementation of the HTTP <code>QUERY</code> method (RFC&nbsp;10008) with body-aware caching — safe, idempotent reads that carry complex payloads without URL-length limits or POST's caching side effects. Express, Fastify and raw <code>http</code> adapters, an isomorphic client with auto-retry, and RFC-compliant cache keying that never yields false hits.</div>
-      <div class="proj-tags"><span class="tag">TypeScript</span><span class="tag">Node.js</span><span class="tag">HTTP Caching</span><span class="tag">RFC 10008</span><span class="tag">Express</span><span class="tag">Fastify</span></div>
-      <div class="proj-links">
-        <a href="https://github.com/hardik-goel/http-queryable" class="plink" target="_blank"><i class="ti ti-brand-github"></i> GitHub</a>
-      </div>
-    </div>
-
-    <div class="proj-card amber">
-      <div class="proj-top">
-        <div class="proj-icon">🚚</div>
-        <span class="status-badge status-build">Advisory · FDE</span>
-      </div>
-      <div class="proj-name">Distribution Management System</div>
-      <div class="proj-desc">Forward-deployed engineering on a distribution-management platform (DMS) — order-to-delivery flows, inventory and route data pipelines, and analytics for a distribution client. An occasional advisory engagement delivered via a boutique technology consultancy.</div>
-      <div class="proj-tags"><span class="tag">FDE</span><span class="tag">DMS</span><span class="tag">Data Pipelines</span><span class="tag">Analytics</span></div>
+      <div class="proj-name">Agentic AI Platform</div>
+      <div class="proj-desc">Multi-agent orchestration with specialised AI personas, MCP-based enterprise integrations and autonomous workflow execution.</div>
+      <div class="proj-tags"><span class="tag">Agentic AI</span><span class="tag">MCP</span><span class="tag">Multimodal</span><span class="tag">Orchestration</span></div>
       <div class="proj-links"></div>
     </div>
 
