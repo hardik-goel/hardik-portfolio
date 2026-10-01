@@ -278,7 +278,7 @@ section{padding:5rem clamp(1.5rem,6vw,4rem)}
   display:block;padding-left:1.25rem;position:relative;
   font-size:13px;color:var(--text2);line-height:1.6;
 }
-.tl-bullets li::before{content:"→";color:var(--blue);position:absolute;left:0;top:0}
+.tl-bullets li::before{content:"\2022";color:var(--blue);position:absolute;left:0;top:0}
 .tl-bullets li strong{display:inline;color:var(--text);font-weight:500}
 
 /* ── PROJECTS ────────────────────────────────── */
@@ -694,16 +694,16 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
       <div class="tl-card">
         <div class="tl-header">
           <div>
-            <div class="tl-company">🛒 Tesco · Bangalore</div>
-            <div class="tl-role">Technical Architect — SDE3</div>
+            <div class="tl-company">🛒 Tesco · Bengaluru</div>
+            <div class="tl-role">Technical Architect, Data &amp; AI</div>
           </div>
-          <div class="tl-period">Jan 2025 – Present</div>
+          <div class="tl-period">Jan 2025 - Present</div>
         </div>
         <div class="tl-metrics">
-          <span class="metric-badge g"><i class="ti ti-currency-pound"></i> £3.5B platform</span>
-          <span class="metric-badge g">Commodity onboarding ↓ 65%</span>
-          <span class="metric-badge g">Deploy failures ↓ 80%</span>
-          <span class="metric-badge g">Delivery velocity ↑ 40%</span>
+          <span class="metric-badge g"><i class="ti ti-currency-pound"></i> £3.5B annual procurement</span>
+          <span class="metric-badge g">Commodity onboarding down 65%</span>
+          <span class="metric-badge g">Deploy failures down 80%</span>
+          <span class="metric-badge g">Delivery velocity up 40%</span>
           <span class="metric-badge">MLOps governance</span>
           <span class="metric-badge">Agentic AI framework</span>
           <span class="metric-badge a">Azure ML · MLflow · SHAP</span>
@@ -712,39 +712,34 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
           <i class="ti ti-chevron-down"></i> See full details
         </button>
         <div class="tl-details">
+          <p style="color:var(--text2);font-style:italic;margin-bottom:.75rem">After building and leading a 14-engineer organisation at Paytm, moved to own enterprise AI platform architecture end to end at Tesco scale.</p>
+          <p style="font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:.75rem"><strong style="color:var(--text);font-weight:500">End-to-end architecture and modelling ownership</strong> of an AI-driven commodity forecasting platform supporting <strong style="color:var(--text);font-weight:500">£3.5B in annual procurement</strong>, built in Tesco's Bengaluru GCC for UK commercial and procurement stakeholders.</p>
+
+          <h4 style="font-size:12px;color:var(--teal);margin:.75rem 0 .5rem">Architecture and Platform Ownership</h4>
           <ul class="tl-bullets">
-            <p style="color:var(--text2);font-style:italic;margin-bottom:.75rem">After leading a 14-engineer org at Paytm, chose a deep individual-contributor architect track — to design and own AI platforms hands-on rather than manage at a distance.</p>
-            <p><strong>End-to-end architecture ownership</strong> of an AI-driven commodity forecasting platform supporting a <strong>£3.5B procurement domain</strong>, spanning MLOps governance, platform engineering, and AI-augmented engineering enablement.</p>
+            <li>Architected the platform as a closed prescriptive decision loop, not a forecast dashboard: multi-horizon forecasts, buy-timing and coverage recommendations to commercial buyers, and realised outcomes fed back into monitoring and retraining.</li>
+            <li>Own every layer end to end: reference architecture, data contracts, feature pipelines, model training and promotion, serving and governance.</li>
+            <li>Built metadata-driven pipelines integrating <strong>LSEG and enterprise RDBMS sources</strong>, cutting commodity onboarding effort by 65%.</li>
+            <li>Set and enforce engineering governance standards across Data Engineering and ML (modular architecture, typed interfaces, reusable pipeline templates, pytest coverage gates), cutting deployment failures by 80%.</li>
+          </ul>
 
-<h4>Platform Architecture &amp; MLOps Governance</h4>
+          <h4 style="font-size:12px;color:var(--teal);margin:.75rem 0 .5rem">Modelling and MLOps Governance</h4>
+          <ul class="tl-bullets">
+            <li>Governed MLOps on Azure ML: <strong>MLflow, DQ gates, model registries, Purview lineage</strong> and Maker-Checker deployment controls.</li>
+            <li>Every model must beat naive and seasonal baselines (MAPE/WMAPE) under time-series cross-validation; SHAP explains recommendations; PSI drift drives champion-challenger promotion.</li>
+          </ul>
 
+          <h4 style="font-size:12px;color:var(--teal);margin:.75rem 0 .5rem">Agentic AI and AI-Augmented Engineering</h4>
+          <ul class="tl-bullets">
+            <li>Designed a <strong>persona-based agentic framework</strong> with specialised AI agents for Data Engineering, ML Review, Security and MLOps Governance, one of the earliest enterprise implementations of role-based AI agents in production.</li>
+            <li>Authored AI-enforceable standards that automate coding practice, security guardrails and quality gates via structured context orchestration and RAG.</li>
+            <li>Led adoption of AI-augmented workflows using <strong>Claude and GPT agents</strong> for code review, test generation and pipeline scaffolding, lifting delivery velocity by 40%.</li>
+          </ul>
 
-<ul>
-  <li>Architected and delivered a production-grade AI commodity forecasting platform supporting <strong>£3.5B in annual procurement</strong> across multiple commodities and prediction horizons.</li>
-
-  <li>Designed scalable MLOps workflows on Azure ML using <strong>MLflow, SHAP, and PSI drift monitoring</strong>; established end-to-end governed deployment pipelines with DQ gates, model metadata registries, security scanning, audit logs, Microsoft Purview lineage, and Maker-Checker controls.</li>
-
-  <li>Defined and enforced engineering governance standards across Data Engineering and ML — modular architecture, typed interfaces, reusable pipeline templates, and automated pytest coverage gates — improving deployment consistency and platform reliability.</li>
-
-  <li>Built reusable metadata-driven data and ML pipelines integrating <strong>LSEG and enterprise RDBMS sources</strong>, reducing commodity onboarding effort and improving scalability across new forecasting use cases.</li>
-
-  <li>Revamped fragmented forecasting workflows into a scalable, production-ready architecture optimised for reliability, maintainability, auditability, and developer velocity.</li>
-
-  <li>Delivered stakeholder analytics dashboards and data enrichment solutions, improving commercial visibility into commodity trends and model outputs.</li>
-</ul>
-
-<h4>AI-Augmented Engineering &amp; Agentic Framework Design</h4>
-
-<ul>
-  <li>Pioneered AI-augmented engineering workflows using <strong>Claude and GPT agents</strong> for automated code review, test generation, documentation, and pipeline scaffolding — significantly accelerating delivery velocity.</li>
-
-  <li>Designed a <strong>persona-based agentic framework</strong> with specialised AI roles for Data Engineering, ML Review, Security, and MLOps Governance — one of the earliest enterprise implementations of role-based AI agents in a production data platform.</li>
-
-  <li>Authored AI-enforceable markdown standards enabling automated enforcement of coding practices, security guardrails, and quality gates through structured context orchestration and RAG workflows.</li>
-
-  <li>Contributed architecture consulting and platform engineering across enterprise PoCs and production adoption initiatives, accelerating AI adoption across cross-functional teams.</li>
-</ul>
-</ul>
+          <h4 style="font-size:12px;color:var(--teal);margin:.75rem 0 .5rem">Leadership and Influence</h4>
+          <ul class="tl-bullets">
+            <li>Work directly with UK commercial and procurement leaders on model outputs and buy recommendations.</li>
+            <li>Designing and delivering "AI Architecture 101", an AI literacy programme for up to 1,000 ERP users.</li>
           </ul>
         </div>
       </div>
@@ -756,31 +751,45 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
       <div class="tl-card">
         <div class="tl-header">
           <div>
-            <div class="tl-company">💳 Paytm · Bangalore & Noida</div>
-            <div class="tl-role">Data Engineering Manager</div>
+            <div class="tl-company">💳 Paytm · Bengaluru &amp; Noida</div>
+            <div class="tl-role">Data Engineering Manager · Jul 2024 - Jan 2025</div>
+            <div class="tl-role">Senior Technical Data Engineering Lead · Apr 2023 - Jul 2024</div>
+            <div class="tl-role">Technical Data Engineering Lead · Jan 2022 - Apr 2023</div>
           </div>
-          <div class="tl-period">Jan 2022 – Jan 2025</div>
+          <div class="tl-period">Jan 2022 - Jan 2025</div>
         </div>
         <div class="tl-metrics">
-          <span class="metric-badge g">SLA 15d → 3d</span>
-          <span class="metric-badge g">Attrition ↓ 40%</span>
-          <span class="metric-badge">Cost ↓ 50%+</span>
+          <span class="metric-badge g">SLA 15 to 3 days</span>
+          <span class="metric-badge g">Attrition down 40%</span>
+          <span class="metric-badge">Cost down 50%+</span>
           <span class="metric-badge a">14-member team</span>
-          <span class="metric-badge g">Built FSEBuddy → Product self-serve, cut eng dependency</span>
           <span class="metric-badge">Dream11 scale (1.8B events/day)</span>
         </div>
         <button class="toggle-btn" onclick="toggleDetails(this)">
           <i class="ti ti-chevron-down"></i> See full details
         </button>
         <div class="tl-details">
+          <p style="font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:.75rem">Across three roles, built Paytm's incentives and merchant data capability from a standing start into a <strong style="color:var(--text);font-weight:500">14-member engineering team</strong> in Bengaluru, serving product, finance and business stakeholders at Noida HQ.</p>
+
+          <h4 style="font-size:12px;color:var(--teal);margin:.75rem 0 .5rem">Greenfield Build and Team Leadership</h4>
           <ul class="tl-bullets">
-            <li>Led <strong>14-member engineering team</strong> across incentive management, merchant analytics, and GenAI product initiatives.</li>
-            <li><strong>Incentive platform</strong>: payment SLA 15 → 3 days, accuracy &gt;97%, attrition ↓ 40% — using Airflow, AWS EMR, PySpark, MongoDB, DBT.</li>
-            <li>Drove &gt;50% cost reduction on Incentives; <strong>&gt;70% cost cut on PGOLAP DBR</strong> at 110M daily events (Dream11 scale — 1.8B daily events).</li>
-            <li><strong>Merchant analytics</strong>: &gt;40% offline merchant sales growth, &gt;30% cross-sell rate uplift — Kafka + NiFi + Spark + Apache Hudi + ElasticSearch.</li>
-            <li>Built <strong>FSEBuddy</strong> — self-service platform enabling Product team autonomy, reducing engineering dependency.</li>
-            <li>Delivered <strong>CustomerEchoEase</strong> — GenAI-powered customer insights solution as an internal innovation initiative.</li>
-            <li>Implemented observability frameworks, Maker-Checker processes, and process-level governance controls across the platform.</li>
+            <li>Defined the charter, success metrics, reference architecture and first-year roadmap; shipped a working thin slice to production before scaling headcount.</li>
+            <li>Sequenced hiring deliberately: senior data engineers first, then a serving-layer engineer, then ML and rule-engine specialists only when a modelled decision blocked business value.</li>
+            <li>Set the hiring bar personally, designing and running live SQL, PySpark and system-design interviews across all levels.</li>
+            <li>Ran a distributed model (engineering in Bengaluru, stakeholders in Noida) on written decision records, fixed overlap hours and a demo-and-signoff cadence.</li>
+            <li>Organised outcome-owning pods with on-call rotation and Maker-Checker governance; mentored engineers into senior and lead roles.</li>
+          </ul>
+
+          <h4 style="font-size:12px;color:var(--teal);margin:.75rem 0 .5rem">Incentive Management Platform</h4>
+          <ul class="tl-bullets">
+            <li>Cut payment SLA from 15 days to 3, improved accuracy to over 97% and cut attrition by 40%.</li>
+            <li>Drove over 50% cost reduction on the Incentives platform; architected <strong>PGOLAP on Databricks DBR</strong>, cutting costs by over 70% for 110M daily events at Dream11 scale (1.8B events/day).</li>
+            <li>Built <strong>FSEBuddy</strong>, a self-service platform giving the Product team data autonomy, and delivered <strong>CustomerEchoEase</strong>, a GenAI customer insights solution.</li>
+          </ul>
+
+          <h4 style="font-size:12px;color:var(--teal);margin:.75rem 0 .5rem">Merchant Analytics Platform</h4>
+          <ul class="tl-bullets">
+            <li>Drove over 40% offline merchant sales growth and over 30% increase in cross-sell rate through a real-time analytics platform on Kafka, NiFi, Spark, Apache Hudi and Elasticsearch, with sub-second dashboard queries.</li>
           </ul>
         </div>
       </div>
@@ -792,25 +801,25 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
       <div class="tl-card">
         <div class="tl-header">
           <div>
-            <div class="tl-company">✈️ Impetus Technologies · Gurgaon</div>
+            <div class="tl-company">✈️ Impetus Technologies · Gurugram</div>
             <div class="tl-role">Senior Software Engineer</div>
           </div>
-          <div class="tl-period">Feb 2020 – Jan 2022</div>
+          <div class="tl-period">Feb 2020 - Jan 2022</div>
         </div>
         <div class="tl-metrics">
-          <span class="metric-badge g">Ingestion TAT ↓ 40%</span>
-          <span class="metric-badge g">Error rates ↓ 90%</span>
-          <span class="metric-badge g">Latency 2s → 20ms</span>
+          <span class="metric-badge g">Ingestion TAT down 40%</span>
+          <span class="metric-badge g">Error rates down 90%</span>
+          <span class="metric-badge g">99% latency reduction</span>
         </div>
         <button class="toggle-btn" onclick="toggleDetails(this)">
           <i class="ti ti-chevron-down"></i> See full details
         </button>
         <div class="tl-details">
           <ul class="tl-bullets">
-            <li><strong>ICON framework</strong> (US airline): data lake governance — ingestion TAT ↓ 40%, error rates ↓ 90% — AWS Lambda, Glue, Athena, RDS, PySpark.</li>
-            <li><strong>Search engine optimisation</strong> (intelligence client): latency ↓ 99% (2s → 20ms) using Solr + ELK; Cassandra for cold-path storage; Kafka as data backbone.</li>
-            <li><strong>Semiconductor sensor analytics</strong>: real-time anomaly detection — Kafka + Flink + QuickSight + Redshift Spectrum + DBT + MWAA + Apache Beam.</li>
-            <li>Built internal NLP sentiment analyser using NLTK, outperforming VADER accuracy benchmarks.</li>
+            <li><strong>ICON framework</strong> (US airline): data lake governance, ingestion TAT down 40%, error rates down 90%, using AWS Lambda, Glue, Athena, RDS, PySpark.</li>
+            <li><strong>Search engine optimisation</strong> (intelligence client): 99% latency reduction, from 2 seconds to 20 ms, using Solr and ELK; Cassandra for cold-path storage; Kafka as data backbone.</li>
+            <li><strong>Semiconductor sensor analytics</strong>: real-time anomaly detection with Kafka, Flink, QuickSight, Redshift Spectrum, DBT, MWAA and Apache Beam.</li>
+            <li>Built an internal NLP sentiment analyser using NLTK, outperforming VADER accuracy benchmarks.</li>
           </ul>
         </div>
       </div>
@@ -823,12 +832,12 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
         <div class="tl-header">
           <div>
             <div class="tl-company">🏦 Cognizant · Gurgaon</div>
-            <div class="tl-role">Associate — Big Data Engineer</div>
+            <div class="tl-role">Associate, Big Data Engineer</div>
           </div>
-          <div class="tl-period">Apr 2018 – Jan 2020</div>
+          <div class="tl-period">Apr 2018 - Jan 2020</div>
         </div>
         <div class="tl-metrics">
-          <span class="metric-badge">AML false positives ↓ from 91%</span>
+          <span class="metric-badge">AML false positives down from 91%</span>
           <span class="metric-badge a">European bank</span>
         </div>
         <button class="toggle-btn" onclick="toggleDetails(this)">
@@ -836,8 +845,9 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
         </button>
         <div class="tl-details">
           <ul class="tl-bullets">
-            <li>AML false positive reduction from 91% — LightGBM (Paylay model) + Spark + Hive/Impala pipeline; Oracle/Teradata sources via Sqoop.</li>
-            <li>Mainframe CDC pipeline: Kafka + PySpark + MongoDB as Operational Data Store (ODS) for European bank.</li>
+            <li>Reduced the 91% AML false-positive rate for a European bank, enabling faster regulatory reporting and cutting the monthly investigation backlog.</li>
+            <li>Implemented the ML pipeline with LightGBM (Paylay model), Spark and Hive/Impala; Oracle and Teradata sources ingested via Sqoop.</li>
+            <li>Mainframe CDC pipeline: Kafka, PySpark and MongoDB as Operational Data Store (ODS) for the same European bank.</li>
           </ul>
         </div>
       </div>
@@ -845,14 +855,15 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
 
     <!-- ACCENTURE -->
     <div class="tl-item">
-      <div class="tl-gutter"><div class="tl-dot past"></div></div>
+      <div class="tl-gutter"><div class="tl-dot past"></div><div class="tl-line"></div></div>
       <div class="tl-card">
         <div class="tl-header">
           <div>
-            <div class="tl-company">📡 Accenture · Pune & Gurgaon</div>
-            <div class="tl-role">Software Engineering Analyst</div>
+            <div class="tl-company">📡 Accenture · Gurgaon</div>
+            <div class="tl-role">Software Engineering Analyst · Apr 2016 - Mar 2018</div>
+            <div class="tl-role">Associate Software Engineer · Oct 2014 - Apr 2016</div>
           </div>
-          <div class="tl-period">Oct 2014 – Apr 2018</div>
+          <div class="tl-period">Oct 2014 - Mar 2018</div>
         </div>
         <div class="tl-metrics">
           <span class="metric-badge">US/UK telecom clients</span>
@@ -863,9 +874,106 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
         </button>
         <div class="tl-details">
           <ul class="tl-bullets">
-            <li>CDR/UDR ingestion pipelines for US telecom (postpaid) — Kafka → Spark → Hive data stack.</li>
-            <li>MVNO mobile automation frameworks — Selenium WebDriver, Appium, TestNG, Jenkins (UK telecom).</li>
-            <li>Led cross-functional sprint and UAT testing programs — Agile/Scrum across US prepaid client teams.</li>
+            <li>CDR/UDR ingestion pipelines for US telecom (postpaid) on a Kafka, Spark and Hive data stack.</li>
+            <li>MVNO mobile automation frameworks with Selenium WebDriver, Appium, TestNG and Jenkins (UK telecom).</li>
+            <li>Led cross-functional sprint and UAT testing programs, Agile/Scrum across US prepaid client teams.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- TOLEXO -->
+    <div class="tl-item">
+      <div class="tl-gutter"><div class="tl-dot past"></div></div>
+      <div class="tl-card">
+        <div class="tl-header">
+          <div>
+            <div class="tl-company">🛍️ Tolexo Online Pvt. Ltd. · Noida</div>
+            <div class="tl-role">Associate Software Programmer</div>
+          </div>
+          <div class="tl-period">Apr 2014 - Sep 2014</div>
+        </div>
+        <div class="tl-metrics">
+          <span class="metric-badge a">B2B e-commerce startup</span>
+        </div>
+        <button class="toggle-btn" onclick="toggleDetails(this)">
+          <i class="ti ti-chevron-down"></i> See full details
+        </button>
+        <div class="tl-details">
+          <ul class="tl-bullets">
+            <li>Started my career in a B2B e-commerce startup, a subsidiary of IndiaMART InterMESH Ltd.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- PARALLEL ENGAGEMENTS -->
+  <div class="sec-label fade-up" style="margin-top:3rem"><i class="ti ti-arrows-split"></i> Parallel to employment</div>
+  <h3 class="sec-title fade-up" style="font-size:1.25rem">Parallel Engagements</h3>
+  <p class="sec-sub fade-up">Client-facing and capability-building work run alongside the full-time roles above.</p>
+  <div class="timeline fade-up">
+
+    <div class="tl-item">
+      <div class="tl-gutter"><div class="tl-dot active"></div><div class="tl-line"></div></div>
+      <div class="tl-card">
+        <div class="tl-header">
+          <div>
+            <div class="tl-company">🧭 Forward Deployed Engineer &amp; Solution Owner</div>
+            <div class="tl-role">Independent Engagements (Beverage distribution and Hospitality)</div>
+          </div>
+          <div class="tl-period">Parallel engagement</div>
+        </div>
+        <div class="tl-metrics">
+          <span class="metric-badge g">4,150+ tax invoices</span>
+          <span class="metric-badge g">18,000+ stock movements</span>
+          <span class="metric-badge">686 outlets</span>
+          <span class="metric-badge a">₹1.3 Cr GST-invoiced sales</span>
+        </div>
+        <button class="toggle-btn" onclick="toggleDetails(this)">
+          <i class="ti ti-chevron-down"></i> See full details
+        </button>
+        <div class="tl-details">
+          <p style="font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:.75rem">Single point of accountability for client-facing AI and data engagements, end to end: discovery, architecture, build, deployment and post-launch support, embedded directly with client business and technology leadership.</p>
+          <ul class="tl-bullets">
+            <li>Ran requirement discovery first-hand with client stakeholders, with no intermediary analyst or account layer, converting ambiguous business objectives into a scoped technical roadmap, agreed success metrics and a phased delivery plan.</li>
+            <li>Owned and defended the architecture end to end, including build-versus-buy, the data model and the integration approach against the client's existing systems.</li>
+            <li>Delivered a distributor management platform, replacing spreadsheet-based invoicing and stock reconciliation with a GST-compliant system processing 4,150+ tax invoices and 18,000+ stock movements with full audit traceability, removing manual Excel and WhatsApp order tracking across 686 outlets and ₹1.3 Cr in GST-invoiced sales.</li>
+            <li>For a multi-property hospitality group, designing and building a hospitality management system across five properties, working directly with the owners on priorities and rollout.</li>
+            <li>Ran hypercare after go-live, owned ongoing support, then transitioned runbooks, documentation and operational ownership to the client's team.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tl-item">
+      <div class="tl-gutter"><div class="tl-dot active"></div></div>
+      <div class="tl-card">
+        <div class="tl-header">
+          <div>
+            <div class="tl-company">🎓 Principal AI &amp; Data Educator</div>
+            <div class="tl-role">Enterprise Capability Programmes</div>
+          </div>
+          <div class="tl-period">Parallel engagement</div>
+        </div>
+        <div class="tl-metrics">
+          <span class="metric-badge g">~200 delivered hours in two months</span>
+          <span class="metric-badge">43-hour Level 1 AI Architect programme</span>
+          <span class="metric-badge">9-week AI Solution Architect cohort</span>
+          <span class="metric-badge a">72-hour architecture intensive</span>
+        </div>
+        <button class="toggle-btn" onclick="toggleDetails(this)">
+          <i class="ti ti-chevron-down"></i> See full details
+        </button>
+        <div class="tl-details">
+          <p style="font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:.75rem">I design and deliver the programmes that move enterprise engineering organisations from AI curiosity to AI capability. Around 200 delivered hours in two months, across pharma, healthcare, retail, consulting and IT services clients.</p>
+          <ul class="tl-bullets">
+            <li>Authored a Level 1 AI Architect programme for a corporate learning provider: 43 hours, 9 weeks, 60% hands-on, graduating architects through a formal Review Board into Forward Deployed Engineer readiness. Designed its five-dimension rubric and a measurement model spanning artefact quality, manager-observed behaviour at 60 days, business impact and ROI.</li>
+            <li>Authored a nine-week AI Solution Architect cohort programme for a digital engineering services firm, delivered live to two parallel batches: six tracked competencies, weekly graded work products and a capstone defended before a review board.</li>
+            <li>Delivered a 72-hour advanced architecture and AI-assisted engineering intensive: C4 modelling, ADRs, GenAI patterns, evaluation harnesses, Responsible AI under ISO 42001 and the EU AI Act, OWASP Top 10 for LLM Applications threat modelling, and spec-driven development.</li>
+            <li>Both architect programmes teach the Forward Deployed Engineer model: enter through the business, not the tech stack; frame the problem with the client; quantify the value; defend a build-versus-buy call; ship it; stay accountable after go-live. I designed the Review Board criteria that decide whether an architect is ready.</li>
+            <li>Earlier: curricula and cohorts across UpGrad, Analytics Vidhya, GUVI, Interview Kickstart, Ducat, DataCouch and ToolsQA; PAN-India corporate workshops; guest lectures at graduate universities.</li>
           </ul>
         </div>
       </div>
