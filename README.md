@@ -1,6 +1,6 @@
 # Hardik Portfolio
 
-A premium AI/Data Architect portfolio showcasing enterprise-scale platform engineering, GenAI systems, MLOps governance, open-source AI tooling, and AI-augmented engineering workflows.
+Portfolio of Hardik Goel, Data & AI Architecture Leader: enterprise GenAI, agentic systems, MLOps governance, open-source AI tooling, and AI-augmented engineering workflows.
 
 Built as a modern interactive portfolio experience highlighting:
 
@@ -16,13 +16,13 @@ Built as a modern interactive portfolio experience highlighting:
 ## Live Portfolio
 
 🌐 Portfolio Website
-[Hardik Goel Portfolio](https://hardik-goel.github.io/?utm_source=chatgpt.com)
+[Hardik Goel Portfolio](https://hardik-portfolio-rho.vercel.app/)
 
 💼 LinkedIn
-[Hardik Goel LinkedIn](https://www.linkedin.com/in/hardik-goel-a6334936/?utm_source=chatgpt.com)
+[Hardik Goel LinkedIn](https://www.linkedin.com/in/hardikgoelai/)
 
 🐙 GitHub
-[Hardik Goel GitHub](https://github.com/hardik-goel?utm_source=chatgpt.com)
+[Hardik Goel GitHub](https://github.com/hardik-goel)
 
 ---
 
@@ -70,14 +70,16 @@ Enterprise GenAI assistant for commodity forecasting and procurement intelligenc
 * forecasting workflows
 * stakeholder analytics
 
-## Enterprise AI Governance Platform (Stealth)
+## CompliSense AI
 
-Autonomous governance and compliance framework for enterprise AI adoption involving:
+AI governance and compliance platform for regulated industries:
 
-* agentic governance
-* RAG pipelines
-* compliance monitoring
-* AI workflow observability
+* agentic compliance monitoring
+* alerting and remediation
+* EU AI Act and India's DPDP Act coverage
+* finance, retail and healthcare
+
+[complisenseai.com](https://complisenseai.com/)
 
 ---
 
@@ -123,7 +125,7 @@ Autonomous governance and compliance framework for enterprise AI adoption involv
 
 This portfolio was intentionally designed to bridge:
 
-Enterprise Engineering ↔ Modern GenAI Systems
+Enterprise Engineering and Modern GenAI Systems
 
 The goal was not to create a generic developer portfolio, but a platform reflecting:
 
@@ -168,7 +170,7 @@ Recommended deployment:
 
 Deploy instantly on Vercel:
 
-[Vercel](https://vercel.com?utm_source=chatgpt.com)
+[Vercel](https://vercel.com)
 
 ---
 
@@ -200,7 +202,12 @@ cross-posts, rewrites `blog/*.html` + `sitemap.xml`):
 python3 build_blog.py
 ```
 
-No dependencies — Python stdlib only. Thin/placeholder posts are skipped.
+No dependencies, Python stdlib only. Thin/placeholder posts are skipped.
+
+# Resume
+
+`/resume` redirects to the PDF at `resources/Hardik_Goel_Resume.pdf` (see `vercel.json`).
+A web version of the same content is kept at `resume/index.html`.
 
 # Self-hosted fonts (perf)
 
@@ -221,8 +228,8 @@ python3 build_fonts.py
 # Author
 
 Hardik Goel
-Senior AI & Data Architect
-GenAI Systems Builder · MLOps Platform Owner · Open Source Contributor
+Data & AI Architecture Leader
+Enterprise GenAI · Agentic Systems · MLOps Governance · Bengaluru, India
 
 ---
 

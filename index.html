@@ -77,7 +77,7 @@
 }
 </script>
 
-<!-- Self-hosted fonts + icons (vendored by build_fonts.py) — no external CDN calls -->
+<!-- Self-hosted fonts + icons (vendored by build_fonts.py): no external CDN calls -->
 <link rel="preload" href="/resources/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/resources/fonts/vendor.css">
 <style>
@@ -637,7 +637,7 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
       <div class="about-text">
         <p>Most engineers are either <strong>enterprise-only</strong> or <strong>GenAI-only</strong>. I sit at the intersection: 12+ years owning scalable data platforms, MLOps governance frameworks, and production pipelines, while simultaneously building agentic AI systems, intelligent orchestration frameworks, and LLM-powered engineering workflows.</p>
         <p>At Tesco, I own end-to-end architecture and modelling of a £3.5B commodity AI platform and designed a persona-based agentic engineering framework, one of the earliest enterprise implementations of role-based AI agents in production data engineering. At Paytm, I built an incentives and merchant data capability from a standing start into a 14-member team and drove transformative metrics: payment SLA cut from 15 days to 3, attrition down 40%.</p>
-        <p>Parallel to my corporate career, I've been an <strong>AI educator for 10+ years</strong>, a published author, open-source contributor, and content creator — building community while building systems.</p>
+        <p>Parallel to my corporate career, I've been an <strong>AI educator for 10+ years</strong>, a published author, open-source contributor, and content creator, building community while building systems.</p>
       </div>
       <div class="focus-pills" style="margin-top:1.5rem">
         <span class="pill pill-blue"><i class="ti ti-brain"></i> Agentic AI Systems</span>
@@ -1145,7 +1145,7 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
   </div>
   <p class="sec-sub fade-up" style="margin-top:24px">
     <a class="blog-open" href="/blog/">Read every post on the blog <i class="ti ti-arrow-right"></i></a>
-    — canonical home for all essays, also on Substack &amp; Medium.
+    Canonical home for all essays, also on Substack &amp; Medium.
   </p>
 </section>
 
@@ -1332,7 +1332,7 @@ footer{padding:2rem;text-align:center;font-size:12px;color:var(--text3);border-t
       <div class="tm-quote">His leadership qualities are the best — the way he manages the team and creates a good environment for everyone to do their best work is amazing. He guides the team, shares strong ideas, and is a good leader in true terms.</div>
       <div class="tm-who">
         <div class="tm-name">Tejashri Marne</div>
-        <div class="tm-role">Data Engineer — PySpark, AWS, ETL</div>
+        <div class="tm-role">Data Engineer, PySpark, AWS, ETL</div>
         <div class="tm-rel">Reported to Hardik</div>
       </div>
     </div>
@@ -1461,7 +1461,7 @@ function toggleDetails(btn){
     :'<i class="ti ti-chevron-down"></i> See full details';
 }
 
-/* ── BLOG FEEDS (static, from /blog/posts.json — own domain, no external proxy) ── */
+/* ── BLOG FEEDS (static, from /blog/posts.json, own domain, no external proxy) ── */
 const BLOG_FEEDS={
   substack:{listId:'substack-posts',sourceKey:'substack',platform:'Substack',fallbackUrl:'https://goelh.substack.com/'},
   medium:{listId:'medium-posts',sourceKey:'medium',platform:'Medium',fallbackUrl:'https://medium.com/@hardik.goel214'}
@@ -1630,7 +1630,7 @@ async function sendChat(){
   chatHistory.push({role:'user',content:text});
 
   try{
-    // Calls /api/chat — a Vercel serverless proxy to OpenRouter (free tier)
+    // Calls /api/chat, a Vercel serverless proxy to OpenRouter (free tier)
     const res=await fetch('/api/chat',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
@@ -1641,7 +1641,7 @@ async function sendChat(){
     });
     if(!res.ok){throw new Error('Server error: '+res.status)}
     const data=await res.json();
-    const reply=data.content?.[0]?.text||'Something went wrong — please try again.';
+    const reply=data.content?.[0]?.text||'Something went wrong, please try again.';
     chatHistory.push({role:'assistant',content:reply});
     tDiv.className='cmsg bot';tDiv.textContent=reply;
   }catch(e){

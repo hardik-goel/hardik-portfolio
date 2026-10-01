@@ -1,4 +1,8 @@
 {
+  "redirects": [
+    { "source": "/resume", "destination": "/resources/Hardik_Goel_Resume.pdf", "permanent": false },
+    { "source": "/resume.pdf", "destination": "/resources/Hardik_Goel_Resume.pdf", "permanent": false }
+  ],
   "headers": [
     {
       "source": "/api/(.*)",
