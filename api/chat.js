@@ -26,7 +26,7 @@ export default async function handler(req, res) {
         'X-Title': 'Hardik Goel Portfolio',
       },
       body: JSON.stringify({
-        model: 'inclusionai/ring-2.6-1t:free',
+        model: process.env.OPENROUTER_MODEL || 'google/gemma-4-31b-it:free',
         max_tokens: 800,
         messages: [
           { role: 'system', content: system || '' },
