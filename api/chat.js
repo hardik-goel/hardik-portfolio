@@ -1,3 +1,11 @@
+const MODELS = [
+  'google/gemma-4-31b-it:free',
+  'qwen/qwen3.8-27b:free',
+  'nvidia/nemotron-3-super-120b-a12b:free',
+  'google/gemma-4-26b-a4b-it:free',
+  'thinkingmachines/inkling-small:free',
+];
+
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -26,7 +34,10 @@ export default async function handler(req, res) {
         'X-Title': 'Hardik Goel Portfolio',
       },
       body: JSON.stringify({
-        model: process.env.OPENROUTER_MODEL || 'google/gemma-4-31b-it:free',
+        // Free tiers come and go, and individual providers rate-limit; OpenRouter
+        // falls through this list in order until one answers.
+        model: process.env.OPENROUTER_MODEL || MODELS[0],
+        models: process.env.OPENROUTER_MODEL ? undefined : MODELS,
         max_tokens: 800,
         messages: [
           { role: 'system', content: system || '' },
